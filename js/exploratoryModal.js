@@ -1,0 +1,24 @@
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+  
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+  
+  
+  $(function() {  
+    $('btn-11')
+      .on('mouseenter', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      })
+      .on('mouseout', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      });
+  });

@@ -1,0 +1,97 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Cabeçalhos principais */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Subcabeçalhos */
+h2, h3, h4 {
+    color: #16a085;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+/* Parágrafos */
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Listas */
+ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Destaque de termos importantes */
+strong {
+    color: #e74c3c;
+}
+
+/* Seção de rodapé */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p, ul li {
+        font-size: 14px;
+    }
+}
