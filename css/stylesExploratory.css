@@ -332,10 +332,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-.footer__col p {
-  color: var(--text-light);
-}
-
 .footer__col h4 {
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -350,7 +346,7 @@ nav {
 }
 
 .footer__links a {
-  color: var(--text-light);
+  color: white
 }
 
 .footer__links a:hover {
@@ -821,4 +817,27 @@ video {
 
 .scroll__btn {
   font-size: 23px;
+}
+
+.price{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 0 #000000;
+}
+
+.price span {
+  color: #08ff00; /* Cor inicial (preto) */
+  transition: color 0.3s ease; /* Transição suave */
+}
+
+/* Estilo ao passar o mouse sobre o span */
+.price span:hover {
+  color: #ff6600; /* Cor ao passar o mouse (laranja, por exemplo) */
+}
+
+.welloMelo{
+  color: white;
 }
