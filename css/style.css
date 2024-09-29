@@ -15,11 +15,11 @@
 
 	.textoCriativo {
 		position: relative;
-		font-size: 50px;
+		font-size: 3vw;
 		color: white;
 		text-transform: uppercase;
-		font-weight: 900;
-	}
+		font-family: var(--header-font);
+		}
 
 	.textoCriativos {
 		position: relative;
@@ -37,44 +37,15 @@
 		font-size: 8vw;
 		color: white;
 		text-transform: uppercase;
-		font-weight: 900;
-	}
+		font-family: var(--header-font);
+		}
+
 
 	.textoCriativos {
 		position: relative;
 		font-size: 4vw;
 		color: white;
 		text-transform: uppercase;
-	}
-
-}
-
-
-.textoCriativo::before {
-	content: attr(data-text);
-	position: absolute;
-	top: 0px;
-	left: 0;
-	height: 100%;
-	/* Responsivo para telas menores */
-	overflow: hidden;
-	animation: animate 6s linear infinite;
-	font-family: var(--header-font);
-}
-
-
-
-@keyframes animate {
-
-	0%,
-	10%,
-	100% {
-		width: 0;
-	}
-
-	70%,
-	90% {
-		width: 100%;
 	}
 }
 
@@ -1141,15 +1112,15 @@ a {
 }
 
 .contact__cardd {
-	max-width: 213px;
-	margin: auto;
-	aspect-ratio: 1;
-	display: grid;
-	place-content: center;
-	text-align: center;
-	border: 1px solid var(--extra-light);
-	border-radius: 100%;
-	cursor: pointer;
+    max-width: 213px;
+    margin: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border-radius: 100%;
+    cursor: pointer;
+    background: black;
 }
 
 .contact__cardd span {
