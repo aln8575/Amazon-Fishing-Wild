@@ -3949,9 +3949,7 @@ fieldset:disabled .btn {
     opacity: 0
 }
 
-.collapse:not(.show) {
-    display: none
-}
+
 
 .collapsing {
     height: 0;
@@ -6970,7 +6968,6 @@ fieldset:disabled .btn {
 }
 
 .carousel-indicators [data-bs-target] {
-    box-sizing: content-box;
     flex: 0 1 auto;
     width: 30px;
     height: 3px;
