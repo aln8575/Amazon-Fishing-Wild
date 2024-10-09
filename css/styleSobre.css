@@ -1,0 +1,352 @@
+:root {
+    --primary-color: #0a0d14;
+    --primary-color-light: #20242f;
+    --secondary-color: #f49e09;
+    --extra-light: rgba(255, 255, 255, 0.5);
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Lisu Bosa", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-section {
+    background: url(/assets/peixeWell.jpeg) no-repeat left;
+    background-size: 51%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 27px 0;
+}
+
+.inner-container {
+    width: 55%;
+    float: right;
+    background-color: #74962d;
+    padding: 100px;
+}
+
+.inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.text {
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-family: var(--header-font);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px) {
+    .inner-container {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-section {
+        padding: 0;
+    }
+
+    .inner-container {
+        padding: 25px;
+    }
+}
+
+.textCriativoSobreEmpresa {
+    font-size: 17px;
+    font-weight: 900;
+    color: white;
+}
+
+.click {
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--header-font);
+
+}
+
+
+/* Estilos básicos */
+footer {
+    background-color: #74962d;
+    color: #edf2f4;
+    padding: 11px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container div {
+    flex: 1;
+    margin: 10px 15px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-social h3,
+.footer-newsletter h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #ef233c;
+}
+
+.footer-social ul li a i {
+    margin-right: 8px;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    width: 70%;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ef233c;
+    color: #edf2f4;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.footer-newsletter button:hover {
+    background-color: #d90429;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #8d99ae;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-container div {
+        margin: 5px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------------------------------navbar--------------------------------------------------- */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #74962d;
+    height: 52px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+
+    .nav-list {
+        position: fixed;
+        top: 6vh;
+        right: 0;
+        width: 50vw;
+        height: 45vh;
+        background: #74962d;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    z-index: 1;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.barra{
+    pointer-events: none;
+}
+
+@media (max-width: 999px) {
+    .barra{
+        display: none;
+    }
+    
+}
