@@ -105,9 +105,10 @@
 
 	.imgLogo {
         border-radius: 50%;
-        width: 30%;
+        width: 12%;
         display: flex;
         position: relative;
+        margin: 10px;
 	}
 }
 
@@ -1317,11 +1318,6 @@ a {
     opacity: 0.7;
   }
   
-  .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
   
   nav {
     display: flex;
@@ -1329,6 +1325,7 @@ a {
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
+    height: 136px;
   }
   
   .nav-list {
