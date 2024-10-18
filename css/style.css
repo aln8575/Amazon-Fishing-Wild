@@ -272,6 +272,12 @@
 		border-radius: 150px;
 		object-fit: cover;
 	}
+
+	.img-fluidFooter{
+		width: 30%;
+        display: inline;
+        border-radius: 2%;
+	}
 }
 
 
@@ -298,6 +304,11 @@
 		height: 333px;
 		border-radius: 4%;
 		object-fit: cover;
+	}
+
+	.img-fluidFooter{
+		width: 100%;
+        border-radius: 2%;
 	}
 }
 
@@ -1354,8 +1365,8 @@ a {
   @media (max-width: 999px) {
 
     .nav-list {
-      position: absolute;
-      top: 9vh;
+      position: fixed;
+      top: 12vh;
       right: 0;
       width: 50vw;
       height: 92vh;
