@@ -449,6 +449,7 @@ nav {
   .imgModal {
     width: 100%;
     max-width: 30%;
+    object-fit: cover;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -475,6 +476,14 @@ nav {
   flex-direction: row;
 }
 }
+
+@media (max-width: 768px) {
+  .imgModal {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 @media (max-width: 767px){
   .imgModal {
