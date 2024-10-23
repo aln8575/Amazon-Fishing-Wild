@@ -441,11 +441,11 @@ nav {
 @media (min-width: 768px){
   .imgModal {
     width: 100%;
-    max-width: 28%;
-    height: 324px;
+    max-width: 30%;
+    height: 19rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 37px;
+    margin: 33px;
 }
 
 .modal-content {

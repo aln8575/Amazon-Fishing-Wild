@@ -32,7 +32,71 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a class="nav__logo" href="#"><img src="/assets/logoAmazon.jpeg" alt="" class="imgLogo"></a>
+                <!-- 
+                <a href="#" class="nav__logo">
+                     Amazon Fishing Wild
+                </a> -->
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#" class="nav__link">Home</a></li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link"><a href="#services">Our Trips</a><i
+                                class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="multiSpecies.html" class="dropdown__link">
+                                    Multi-Species
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sportFishingPeacock.html" class="dropdown__link">
+                                    Peacock Bass
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exploratoryTrip.html" class="dropdown__link">
+                                    Exploratory
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            About <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="sobre.html" class="dropdown__link">
+                                    <i class="ri-user-line"></i> Meet Wellington Melo
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- <header>
         <nav>
             <a class="logo" href="#"><img src="/assets/logoAmazon.jpeg" alt="" class="imgLogo"></a>
             <div class="mobile-menu">
@@ -46,7 +110,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
     <section id="#" class="hidden home">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -93,6 +157,10 @@
         </div>
     </section>
 
+    <section id="services" class="hidden servicesProjects">
+
+    </section>
+
     <!-- about section starts -->
     <section id="about" class="hidden aboutSobre">
         <div class="container">
@@ -106,8 +174,9 @@
                 </div> -->
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="about-text">
-                        <h1 class="textoCriativo">Amazon Fishing Wild</h1>
-                        <h5 class="textoCriativos">Wellington Melo - Over 27 YEARS OF FISHING EXPERTISE</h5>
+                        <h1 class="textoCriativo"><a href="sobre.html">Amazon Fishing Wild</a></h1>
+                        <h5 class="textoCriativos"><a href="sobre.html">Wellington Melo - Over 27 YEARS OF FISHING
+                                EXPERTISE</a></h5>
                     </div>
                 </div>
             </div>
@@ -115,58 +184,96 @@
     </section>
 
     <section id="services" class="hidden servicesProjects">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center pb-5 text-white titleServices">
-                        <h2>Our New Trips</h2>
-                    </div>
+        <div class="">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5 text-white titleServices">
+                    <h2>Our Trips</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4 serviceCards">
-                    <div class="card text-light text-center bg-transparent pb-2">
-                        <div class="card-body text-black">
-                            <div class="img-area mb-4">
-                                <img src="/assets/multiSpeciesBannerCard.jpg" class="img-fluid" alt="Mult species">
-                            </div>
-                            <h3 class="card-title">AMAZON MULTI-SPECIES TRIP</h3>
-                            <p class="lead">Surrounded by spectacular primeval forest, the Rio Guariba is home to a
-                                broad swath of the Amazon's incredible biodiversity.</p>
-                            <a href="multiSpecies.html" class="button_slide slide_right">Read More</a>
-                        </div>
-                    </div>
+        </div>
+        <div class="caixaSapato">
+            <!-- Card 1 -->
+            <div class="cards card-1">
+                <!-- card-header -->
+                <div class="cards-header">
+                    <img src="/assets/multiSpeciesBannerCard.jpg" class="card-img" />
                 </div>
+                <!-- card-header -->
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4 serviceCards">
-                    <div class="card text-light text-center bg-transparent pb-2">
-                        <div class="card-body text-black">
-                            <div class="img-area mb-4">
-                                <img src="./assets/bannerCardPeacockTeste - Copia.jpg" class="img-fluid"
-                                    alt="Peacock bass">
-                            </div>
-                            <h3 class="card-title">GIANT AMAZON PEACOCK BASS</h3>
-                            <p class="lead">Peacock bass are large freshwater cichlids of the genus Cichla.</p>
-                            <a href="sportFishingPeacock.html" class="button_slide slide_right">Read More</a>
-                        </div>
-                    </div>
+                <!-- card-body -->
+                <div class="cards-body">
+                    <!-- <h3 class="card-local">Estados Unidos</h3> -->
+                    <h2 class="card-titulo">AMAZON MULTI-SPECIES TRIP</h2>
+                    <p class="card-texto">
+                        Surrounded by spectacular primeval forest, the Rio Guariba is home to a
+                        broad swath of the Amazon's incredible biodiversity.
+                    </p>
                 </div>
+                <!-- card-body -->
 
-                <div class="col-12 col-md-6 col-lg-4 mb-4 serviceCards">
-                    <div class="card text-light text-center bg-transparent pb-2">
-                        <div class="card-body text-black">
-                            <div class="img-area mb-4">
-                                <img src="./assets/exploratoryGallery2.jpg" class="img-fluid" alt="Exploratory trip">
-                            </div>
-                            <h3 class="card-title">AMAZON EXPLORATORY TRIP</h3>
-                            <p class="lead">Our exploratory trips are designed for avid fishermen with a passion for
-                                exploration, adventure and discovery.</p>
-                            <a href="exploratoryTrip.html" class="button_slide slide_right">Read More</a>
-                        </div>
-                    </div>
+                <!-- card-footer -->
+                <div class="card-footers">
+                    <a href="multiSpecies.html">READ MORE</a>
                 </div>
+                <!-- card-footer -->
             </div>
+            <!-- Card 1 -->
 
+            <!-- Card 2 -->
+            <div class="cards card-2">
+                <!-- card-header -->
+                <div class="cards-header">
+                    <img src="./assets/bannerCardPeacockTeste - Copia.jpg" class="card-img" />
+                </div>
+                <!-- card-header -->
+
+                <!-- card-body -->
+                <div class="cards-body">
+                    <!-- <h3 class="card-local">China</h3> -->
+                    <h2 class="card-titulo">GIANT AMAZON PEACOCK BASS</h2>
+                    <p class="card-texto">
+                        Peacock bass are the world’s most powerful and violent sportfish. Our comfortable yacht trip
+                        takes you to the Rio Negro basin, home of the world’s largest peacock bass.
+                    </p>
+                </div>
+                <!-- card-body -->
+
+                <!-- card-footer -->
+                <div class="card-footers">
+                    <a href="sportFishingPeacock.html">READ MORE</a>
+                </div>
+                <!-- card-footer -->
+            </div>
+            <!-- Card 2 -->
+
+            <!-- Card 3 -->
+            <div class="cards card-3">
+                <!-- card-header -->
+                <div class="cards-header">
+                    <img src="./assets/exploratoryGallery2.jpg" class="card-img" />
+                </div>
+                <!-- card-header -->
+
+                <!-- card-body -->
+                <div class="cards-body">
+                    <!-- <h3 class="card-local">França</h3> -->
+                    <h2 class="card-titulo">AMAZON EXPLORATORY TRIP</h2>
+                    <p class="card-texto">
+                        Our exploratory trips are designed for avid fishermen with a passion for
+                        exploration, adventure and discovery.
+                    </p>
+                </div>
+                <!-- card-body -->
+
+                <!-- card-footer -->
+                <div class="card-footers">
+                    <a href="exploratoryTrip.html">READ MORE</a>
+                </div>
+                <!-- card-footer -->
+            </div>
+            <!-- Card 3 -->
+
+            <!-- Link Tutorial: https://youtu.be/UEm65E2_Y2Q -->
         </div>
     </section>
 
@@ -196,7 +303,7 @@
     <section class="contactt" id="contact">
         <div class="section__container contact__container">
             <div class="contactt__col">
-                <h4>Contact a travel researcher</h4>
+                <h4>Contact a travel expert</h4>
                 <p>We always aim to reply within 24 hours.</p>
             </div>
             <div class="contactt__col">
@@ -212,13 +319,48 @@
                     <a class="nav-link" href="#contact"></a>
                     <a class="textContatoWpp"
                         href="https://wa.me/559294946453?text=Welcome! Leave your message and we will get back to you soon."
-                        target="_blank"> Send us an enquiry </a>
+                        target="_blank"> Send us an inquiry via Whatsapp</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="footerOk">
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About</h3>
+                <a href="sobre.html">
+                    <p>Wellington Melo - Over 27 YEARS OF FISHING EXPERTISE</p>
+                </a>
+
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="multiSpecies.html">AMAZON MULTI-SPECIES TRIP</a></li>
+                    <li><a href="sportFishingPeacock.html">GIANT AMAZON PEACOCK BASS</a></li>
+                    <li><a href="exploratoryTrip.html">AMAZON EXPLORATORY TRIP</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Social Media</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/fishingwell_afw/"></i> Instagram</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Web Design Mastery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- <section class="footerOk">
         <div class="section__container footer__container">
             <div class="footer__socials">
                 <span>
@@ -243,7 +385,7 @@
             <a href="https://wa.me/+559294946453" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
             <a href="tel:+559294946453" class="icon"><i class="fas fa-phone"></i></a>
         </div>
-    </section>
+    </section> -->
 
     <!-- All Js -->
     <script src="js/bootstrap.bundle.min.js"></script>
