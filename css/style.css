@@ -171,9 +171,7 @@
 		margin-bottom: 30px;
 	}
 
-	.img-area img {
-		width: 100%;
-	}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -278,7 +276,7 @@
 	.img-fluidFooter{
 		width: 30%;
         display: inline;
-        border-radius: 2%;
+        border-radius: 9px;
 	}
 }
 
@@ -1114,7 +1112,9 @@ a {
 }
 
 .img-area {
-	overflow: hidden;
+	display: flex;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .card p.lead {
