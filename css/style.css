@@ -1476,11 +1476,7 @@ a {
   text-decoration: none;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  /* max-width: 1120px;
-  margin-inline: 1.5rem; */
-}
+
 
 /*=============== HEADER ===============*/
 .header {
@@ -1666,9 +1662,7 @@ a {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
-  .container {
-    margin-inline: 1rem;
-  }
+
 
   .nav__link {
     padding-inline: 1rem;
@@ -2276,7 +2270,7 @@ nav {
   }
 
   .content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .destination__grid {
