@@ -326,8 +326,12 @@ nav {
   gap: 4rem 2rem;
 }
 
+.emailContact{
+  width: 10px;
+}
+
 .footer__col:first-child {
-  max-width: 300px;
+  max-width: 90%;
 }
 
 .footer__logo {
@@ -552,7 +556,6 @@ nav {
   .imgModal {
 width: 100%;
         max-width: 30%;
-        height: 19rem;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 28px;
@@ -799,7 +802,12 @@ video {
 
 .scroll__btn {
   font-size: 23px;
-    margin: 5px;
+  background: #33ae3f;
+  margin: 5px;
+  padding: 8px;
+  width: 198px;
+  border-radius: 13px;
+  margin-left: 0px;
 }
 
 a {
