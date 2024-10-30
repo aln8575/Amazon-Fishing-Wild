@@ -456,11 +456,11 @@ nav {
 
 @media (min-width: 768px) {
   .imgModal {
-    width: 100%;
-    max-width: 30%;
-    height: 28rem;
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 04px 8px rgba(0, 0, 0, 0.1); 
     margin: 28px;
   }
 
@@ -491,21 +491,14 @@ nav {
   }
 }
 
-@media (max-width: 768px) {
-  .imgModal {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-
 @media (max-width: 767px) {
   .imgModal {
-    width: 70%;
-    height: auto;
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 36px;
+    box-shadow: 04px 8px rgba(0, 0, 0, 0.1);
+    margin: 28px;
   }
 
   .img-fluidFooter {

@@ -440,12 +440,12 @@ nav {
 
 @media (min-width: 768px){
   .imgModal {
-    width: 100%;
-    max-width: 30%;
-    height: 19rem;
+    width: 233px;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 33px;
+    margin: 20px;
+    object-fit: cover;
 }
 
 .img-fluidFooter {
@@ -536,10 +536,12 @@ nav {
 }
 
 .imgModal {
-  width: 80%;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 36px;
+  margin: 67px;
+  object-fit: cover;
 }
 
 
