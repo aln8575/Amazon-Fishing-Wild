@@ -686,12 +686,13 @@ footer {
 
 @media (min-width: 768px){
   .imgModal {
-        width: 100%;
-        max-width: 30%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 28px;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 28px;
+    height: 300px;
     }
+    
     .img-fluidFooter {
       width: 30%;
       display: inline;
