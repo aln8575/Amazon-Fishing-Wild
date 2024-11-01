@@ -1092,3 +1092,7 @@ footer {
     overflow: hidden;
     justify-content: center;
 }
+
+.pdfModal{
+  height: 100%;
+}
