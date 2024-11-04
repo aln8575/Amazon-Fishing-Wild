@@ -5,7 +5,7 @@
   --for-color: #0c270a;
   --primary-color: #0a1e27;
   --five-color: #0a2227;
-  --secondary-color: #ffffff;
+  --secondary-color: #e9c675;
   --three-color: #f8973a;
   --text-light: #cbd5e1;
   --white: #ffffff;
@@ -464,6 +464,16 @@ nav {
     margin: 28px;
   }
 
+  .textDownload {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
   .img-fluidFooter {
     width: 30%;
     display: inline;
@@ -500,6 +510,16 @@ nav {
     box-shadow: 04px 8px rgba(0, 0, 0, 0.1);
     margin: 28px;
   }
+
+  .textDownload {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
   .img-fluidFooter {
     width: 100%;
