@@ -1093,6 +1093,7 @@ footer {
     justify-content: center;
 }
 
-.pdfModal{
+.pdfModal {
+  width: 100%;
   height: 100%;
 }
