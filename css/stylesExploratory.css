@@ -448,6 +448,16 @@ nav {
     object-fit: cover;
 }
 
+.textDownload {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .img-fluidFooter {
   width: 30%;
   display: inline;
@@ -1056,6 +1066,16 @@ footer {
 		flex-direction: column;
 		text-align: center;
 	}
+
+  .textDownload {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
   
   .img-fluidFooter {
     width: 100%;
