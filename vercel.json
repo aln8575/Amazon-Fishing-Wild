@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/sobre", "destination": "/sobre.html" },
+    { "source": "/contato", "destination": "/contato.html" },
+    { "source": "/exploratoryTrip", "destination": "/exploratoryTrip.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "indexPolicy", "destination": "/indexPolicy.html" },
+    { "source": "multiSpecies", "destination": "/multiSpecies.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/thanks", "destination": "/thanks.html" },
+    { "source": "/sportFishingPeacock", "destination": "/sportFishingPeacock.html" }
+  ]
+}
