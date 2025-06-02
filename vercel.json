@@ -7,7 +7,6 @@
     { "source": "indexPolicy", "destination": "/indexPolicy.html" },
     { "source": "multiSpecies", "destination": "/multiSpecies.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/thanks", "destination": "/thanks.html" },
-    { "source": "/sportFishingPeacock", "destination": "/sportFishingPeacock.html" }
+    { "source": "/thanks", "destination": "/thanks.html" }
   ]
 }
