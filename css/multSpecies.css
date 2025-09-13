@@ -10,6 +10,10 @@
     --white: #ffffff;
     --max-width: 1200px;
     --header-font: "Playfair Display", serif;
+    --clr-pink: #EF476F;
+    --clr-green: #06D6A0;
+    --clr-green_hover: #0cc493;
+    --clr-green_active: #0daf84;
 }
 
 * {
@@ -75,12 +79,10 @@
     color: var(--white);
 }
 
-
 img {
     display: flex;
     width: 100%;
 }
-
 a {
     text-decoration: none;
     transition: 0.3s;
@@ -524,13 +526,6 @@ footer {
     z-index: 1;
     margin-top: 198px;
     margin-right: 207px;
-}
-
-:root {
-    --clr-pink: #EF476F;
-    --clr-green: #06D6A0;
-    --clr-green_hover: #0cc493;
-    --clr-green_active: #0daf84;
 }
 
 .modal {
