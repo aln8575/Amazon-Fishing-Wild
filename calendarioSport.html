@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 Multi-Species Trip Schedule</title>
+  <title>2026 Peacock Bass Trip Schedule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       background-color: #0a2227;
@@ -17,32 +19,33 @@
 
     .container {
       border: 1px solid #ffffff;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 40px;
-      max-width: 800px;
+      max-width: 850px;
       width: 100%;
       background-color: #0a2227;
-      box-shadow: 0 0 15px rgba(232, 201, 92, 0.2);
+      box-shadow: 0 0 25px rgba(232, 201, 92, 0.25);
     }
 
     h1 {
       text-align: center;
       color: #ffffff;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 30px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       border: 1px solid #ffffff;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid #ffffff;
-      padding: 10px 12px;
+      padding: 10px 14px;
       text-align: left;
     }
 
@@ -54,9 +57,9 @@
 
     td {
       color: #fff8d0;
+      background-color: rgba(255, 255, 255, 0.05);
     }
 
-    /* Título acima da tabela */
     caption {
       caption-side: top;
       text-align: center;
@@ -66,46 +69,88 @@
       font-size: 16px;
     }
 
-    /* Itinerary section */
-    h2 {
+    /* Section title */
+    .section-title {
       color: #b2f7a4;
       font-size: 18px;
       font-weight: bold;
-      margin-top: 40px;
-      border-bottom: 1px solid #e8c95c;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      border-bottom: 2px solid #e8c95c;
       padding-bottom: 6px;
     }
 
-    p {
+    /* Itinerary cards */
+    .day {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px 20px;
+      border-left: 4px solid #b2f7a4;
+      border-radius: 6px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: #b2f7a4;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .day h3 {
+      margin: 0;
+      color: #b2f7a4;
+      font-size: 1.05rem;
+    }
+
+    .day p {
+      margin: 5px 0 0;
       color: #fff8d0;
-      margin: 4px 0 15px 0;
+      font-size: 0.95rem;
       line-height: 1.5;
     }
 
-    strong {
-      color: #b2f7a4;
-    }
-
-    /* Botão voltar */
+    /* Button */
     .back-button {
       display: block;
       margin: 40px auto 0;
       text-align: center;
       color: #e8c95c;
       border: 1px solid #e8c95c;
-      padding: 10px;
+      padding: 10px 20px;
       border-radius: 4px;
       text-decoration: none;
-      width: fit-content;
+      font-weight: bold;
       transition: all 0.3s ease;
+      width: fit-content;
     }
 
     .back-button:hover {
       background-color: #e8c95c;
       color: #082318;
+      box-shadow: 0 0 10px #e8c95c;
+    }
+
+    @media (max-width: 600px) {
+      .day {
+        flex-direction: column;
+      }
+
+      .icon {
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>2026 Peacock Bass Trip Schedule</h1>
@@ -160,42 +205,58 @@
       </tbody>
     </table>
 
-    <h2>Amazon Fishing Wild – Trip Itinerary – All trips are one week at the fishery</h2>
+    <div class="section-title">Amazon Fishing Wild – Trip Itinerary – All trips are one week at the fishery</div>
 
-    <p><strong>Day X – Start Travel</strong><br>
-    Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your charter flight departure.</p>
+    <div class="day">
+      <i class="fa-solid fa-plane-departure icon"></i>
+      <div>
+        <h3>Day X – Start Travel</h3>
+        <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your charter flight departure.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 0 – Arrive Manaus</strong><br>
-    Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.</p>
+    <div class="day">
+      <i class="fa-solid fa-hotel icon"></i>
+      <div>
+        <h3>Day 0 – Arrive Manaus</h3>
+        <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 1 – Monday – Arrive Fishery</strong><br>
-    Our staff will transfer you to your charter flight to the selected fishery where you will arrive around midday.</p>
+    <div class="day">
+      <i class="fa-solid fa-ship icon"></i>
+      <div>
+        <h3>Day 1 – Arrive Yacht Fishery</h3>
+        <p>Our staff will transfer you to your charter flight and then board the luxury yacht, where you will arrive around midday.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 2 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
+    <div class="day">
+      <i class="fa-solid fa-fish-fins icon"></i>
+      <div>
+        <h3>Days 2–7 – Fishing</h3>
+        <p>Full days of fishing for Peacock Bass and enjoying the Amazonian scenery aboard our luxury accommodations.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 3 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
+    <div class="day">
+      <i class="fa-solid fa-plane-arrival icon"></i>
+      <div>
+        <h3>Day 8 – Return Manaus</h3>
+        <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your selected international airline at the airport.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 4 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
+    <div class="day">
+      <i class="fa-solid fa-house-chimney icon"></i>
+      <div>
+        <h3>Day XX – Return Home</h3>
+        <p>Travel home and cherish your Amazon adventure memories.</p>
+      </div>
+    </div>
 
-    <p><strong>Day 5 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
-
-    <p><strong>Day 6 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
-
-    <p><strong>Day 7 – Fishing</strong><br>
-    A full day of fishing and enjoying the region and facility.</p>
-
-    <p><strong>Day 8 – Return Manaus</strong><br>
-    Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your selected international travel airline at the airport.</p>
-
-    <p><strong>Day XX – Return Home</strong><br>
-    Travel home.</p>
-
-    <a href="sportFishingPeacock.html" class="back-button">← Back to peacock Bass</a>
+    <a href="sportFishingPeacock.html" class="back-button">← Back to Peacock Bass</a>
   </div>
 </body>
+
 </html>

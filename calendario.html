@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amazon Fishing Trip Schedule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       background-color: #0b1e13;
@@ -60,10 +61,31 @@
       font-size: 1.4rem;
       color: #ffcc4d;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .day {
       margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(18, 54, 31, 0.2);
+      padding: 15px 20px;
+      border-left: 3px solid #d4af37;
+      border-radius: 4px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-3px);
+      background: rgba(18, 54, 31, 0.35);
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: #ffcc4d;
+      flex-shrink: 0;
+      margin-top: 3px;
     }
 
     .day h3 {
@@ -73,7 +95,7 @@
     }
 
     .day p {
-      margin: 5px 0 0 20px;
+      margin: 5px 0 0;
       color: #e8e1c4;
       font-size: 0.95rem;
     }
@@ -106,7 +128,6 @@
 
     <table>
       <caption>Guariba Lodge – Multi Species – Luxurious Jungle Hotel – Monday Transfers</caption>
-
       <thead>
         <tr>
           <th>Trip #</th>
@@ -146,61 +167,51 @@
     <div class="section-title">Amazon Fishing Wild – Trip Itinerary</div>
 
     <div class="day">
-      <h3>Day X – Start Travel</h3>
-      <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your
-        charter flight departure.</p>
+      <i class="fa-solid fa-plane-departure icon"></i>
+      <div>
+        <h3>Day X – Start Travel</h3>
+        <p>Depending on your selected route, depart from home and arrive in Manaus the day before your charter flight.</p>
+      </div>
     </div>
 
     <div class="day">
-      <h3>Day 0 – Arrive Manaus</h3>
-      <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.</p>
+      <i class="fa-solid fa-hotel icon"></i>
+      <div>
+        <h3>Day 0 – Arrive in Manaus</h3>
+        <p>Our staff will meet you at the airport and transfer you to our base hotel for an overnight stay.</p>
+      </div>
     </div>
 
     <div class="day">
-      <h3>Day 1 – Monday – Arrive Fishery</h3>
-      <p>Our staff will transfer you to your charter flight to the selected fishery where you will arrive around midday.
-      </p>
+      <i class="fa-solid fa-helicopter icon"></i>
+      <div>
+        <h3>Day 1 – Monday – Arrive at Fishery</h3>
+        <p>Transfer by charter flight to the selected fishery, arriving around midday.</p>
+      </div>
     </div>
 
     <div class="day">
-      <h3>Day 2 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
+      <i class="fa-solid fa-fish-fins icon"></i>
+      <div>
+        <h3>Days 2–7 – Fishing</h3>
+        <p>Full days of fishing, relaxation, and enjoyment of the region and facilities.</p>
+      </div>
     </div>
 
     <div class="day">
-      <h3>Day 3 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
+      <i class="fa-solid fa-plane-arrival icon"></i>
+      <div>
+        <h3>Day 8 – Return to Manaus</h3>
+        <p>Charter flight back to Manaus followed by transfer to our base hotel or to your international flight.</p>
+      </div>
     </div>
 
     <div class="day">
-      <h3>Day 4 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
-    </div>
-
-    <div class="day">
-      <h3>Day 5 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
-    </div>
-
-    <div class="day">
-      <h3>Day 6 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
-    </div>
-
-    <div class="day">
-      <h3>Day 7 – Fishing</h3>
-      <p>A full day of fishing and enjoying the region and facility.</p>
-    </div>
-
-    <div class="day">
-      <h3>Day 8 – Return Manaus</h3>
-      <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your
-        selected international travel airline at the airport.</p>
-    </div>
-
-    <div class="day">
-      <h3>Day xx – Return Home</h3>
-      <p>Travel home.</p>
+      <i class="fa-solid fa-house-chimney icon"></i>
+      <div>
+        <h3>Day XX – Return Home</h3>
+        <p>Travel home.</p>
+      </div>
     </div>
 
     <a href="multiSpecies.html" class="back-button">← Back to Multi-Species</a>
