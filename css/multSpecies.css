@@ -37,7 +37,7 @@
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--secondary-color);
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 .section__subheader::before {
@@ -238,11 +238,10 @@ nav {
 }
 
 .about__container {
-    padding-top: 40px;
+    padding-top: 0px;
     display: grid;
-    gap: 5rem 2rem;
     overflow: hidden;
-    margin-top: 140px;
+    margin-top: 100px;
 }
 
 .about__image img {
@@ -496,7 +495,7 @@ footer {
     .about__container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        gap: 10rem 10rem;
+        gap: 2rem 2rem;
     }
 
     .about__image-1 {
