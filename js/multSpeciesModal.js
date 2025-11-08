@@ -92,3 +92,11 @@ const showMenu = (toggleId, navId) =>{
 }
 
 showMenu('nav-toggle','nav-menu')
+
+
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});

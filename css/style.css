@@ -578,25 +578,12 @@ a {
     z-index: var(--z-fixed);
 }
 
-.nav__logo,
+
 .nav__burger,
 .nav__close {
     color: var(--white-color);
 }
 
-.nav__data {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__logo {
-    display: inline-flex;
-    align-items: center;
-    column-gap: .25rem;
-    font-weight: var(--font-semi-bold);
-}
 
 .nav__logo i {
     font-weight: initial;
@@ -761,9 +748,6 @@ a {
     }
 
     .nav__link {
-        height: 100%;
-        width: 100px;
-        justify-content: initial;
         column-gap: .25rem;
     }
 

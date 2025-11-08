@@ -12,21 +12,49 @@
 </head>
 
 <body>
-  <header>
+
+  <header class="header" id="home">
     <nav>
-      <a class="logo" href="index.html"><img src="" alt="" class="imgLogo"></a>
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+      <div class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="/assets/logoAmazon.jpeg" class="imgLogo" alt="Logo">
+        </a>
+
+        <!-- Botão de abrir menu (mobile) -->
+        <div class="nav__toggle" id="nav-toggle">
+          ☰
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <a href="#" class="nav__link">
+                Our Trips <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </a>
+              <ul class="dropdown__menu">
+                <li><a href="multiSpecies.html" class="dropdown__link">Multi-Species</a></li>
+                <li><a href="sportFishingPeacock.html" class="dropdown__link">Peacock Bass</a></li>
+                <li><a href="exploratoryTrip.html" class="dropdown__link">Exploratory</a></li>
+              </ul>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="nav__link">
+                About <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </a>
+              <ul class="dropdown__menu">
+                <li><a href="sobre.html" class="dropdown__link"> Meet Wellington Melo</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
   </header>
+
+
     <div class="about-section">
         <div class="inner-container">
             <h1>Meet Wellington  Melo</h1>
@@ -39,11 +67,10 @@
               Previously, I served as a manager and representative for a leading American fishing company in Brazil, where I gained valuable experience and built a strong reputation for delivering exceptional trips. Now, I'm excited to offer my expertise and passion through my own company, providing the same level of excellence and creating even more unique and unforgettable adventures.
                
               Ready to experience the thrill of the wild? Contact me today to book your next Amazon fishing adventure!<br>
-                <span class="click">Click Here:</span><a href="mailto:amazonfishingwild@gmail.com">amazonfishingwild@gmail.com</a><br>
-                <span class="click">Click Here:</span> <a class="textContatoWppAbout"
-                    href="https://wa.me/559294946453?text=Welcome! Leave your message and we will get back to you soon."
-                    target="_blank">Whatsapp</a><br><span class="click">Click Here:</span> <a class="numberTel" href="tel:+5592994946453">+55 (92)
-                    99494-6453</a>
+                <span class="click">Click Here:</span><a class="numberTel" href="mailto:amazonfishingwild@gmail.com">amazonfishingwild@gmail.com</a><br>
+                <span class="click">Click Here:</span><a class="numberTel" href="https://wa.me/5585991848597?text=Welcome! Leave your message and we will get back to you soon." target="_blank">Whatsapp</a><br>
+                <span class="click">Click Here:</span><a class="numberTel" href="tel:+5585991848597">+55 (85)
+                    99184-8597</a>
                 <br>Dear angler,
                 For those of you who have fished with me before, I would love to be your host once again and share
                 incredible new adventures with you. For those who haven’t, join me on the fishing trip of a lifetime.
@@ -185,17 +212,15 @@
     <div class="footer-container">
       <div class="footer-about">
         <h3>About</h3>
-        <a href="sobre.html">
+        <a href="sobre.html" class="titleFooter">
           <p>Organize your Multi Species trip with Wellington Melo’s “Fishing Wild</p>
         </a>
         <div class="footer__col">
           <ul class="footer__links">
-            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#contact" class="titleFooter" >Contact Us</a></li>
             <li>
-              <a class="textContatoWppAbout"
-                href="https://wa.me/559294946453?text=Welcome! Leave your message and we will get back to you soon."
-                target="_blank">Whatsapp</a>
-              <a class="numberTel" href="tel:+5592994946453">+55 (92) 99494-6453</a>
+              <a class="textContatoWppAbout" href="https://wa.me/5585991848597?text=Welcome! Leave your message and we will get back to you soon." target="_blank">Whatsapp</a>
+              <a class="numberTel" href="tel:+5585991848597">+55 (85) 99184-8597</a>
             </li>
           </ul>
         </div>

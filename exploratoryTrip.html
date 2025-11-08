@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -16,25 +15,51 @@
 
 <body>
   <header class="header" id="home">
+    <nav>
+      <div class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="/assets/logoAmazon.jpeg" class="imgLogo" alt="Logo">
+        </a>
+
+        <!-- Botão de abrir menu (mobile) -->
+        <div class="nav__toggle" id="nav-toggle">
+          ☰
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li class="dropdown__item">
+              <a href="#" class="nav__link">
+                Our Trips <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </a>
+              <ul class="dropdown__menu">
+                <li><a href="multiSpecies.html" class="dropdown__link">Multi-Species</a></li>
+                <li><a href="sportFishingPeacock.html" class="dropdown__link">Peacock Bass</a></li>
+                <li><a href="exploratoryTrip.html" class="dropdown__link">Exploratory</a></li>
+              </ul>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="nav__link">
+                About <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </a>
+              <ul class="dropdown__menu">
+                <li><a href="sobre.html" class="dropdown__link"> Meet Wellington Melo</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
     <div class="video-background">
       <video autoplay muted loop>
         <source src="/videos/mulSpecies.mp4" type="video/mp4">
       </video>
     </div>
-    <nav>
-      <a class="logo" href="index.html"><img src="" alt="" class="imgLogo"></a>
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
 
     <div class="section__container header__container">
       <div class="header__content">
@@ -54,7 +79,7 @@
           <a href="https://wa.me/+559294946453" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-  </header>
+    </div>
 
   <section class="about">
     <div class="section__container about__container" id="about">
