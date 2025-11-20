@@ -192,9 +192,6 @@
         <div class="modal" id="modal-3">
           <div class="modal-content">
             <h2 class="tituloModal">ITINERARY MULTI-SPECIES VARIETY TRIP</h2>
-            <!-- <p></p> -->
-            <!-- <p class="textAboutExploratory">
-            </p> -->
             <div class="imgContainerModal">
             </div>
             <span class="close-button" onclick="closeModal('modal-3')">Close</span>
@@ -220,7 +217,77 @@
         </div>
       </div>
     </div>
+
+    <section class="galleryV2-section">
+    <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
+    <p class="galleryV2-subtitle">
+      Stunning moments captured during our exclusive Multi-Species expeditions.
+    </p>
+
+    <div class="galleryV2-wrapper">
+      <button class="galleryV2-btn left" aria-label="Previous">&#10094;</button>
+
+      <div class="galleryV2-carousel" id="galleryV2Carousel">
+        <div class="galleryV2-item">
+          <img src="assets/bannerMultiSpecies.png" alt="Fishing Image 1">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/guaribaMulte.jpeg" alt="Fishing Image 2">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/multspeciesBanner.jpg" alt="Fishing Image 3">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/bannerUmMultispecies.jpg" alt="Fishing Image 4">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/photo1.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo2.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo3.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo4.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo5.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo6.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo7.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo8.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo9.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo10.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo11.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo12.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo13.JPG" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/photo14.JPG" alt="Fishing Image 5">
+        </div>
+      </div>
+      <button class="galleryV2-btn right" aria-label="Next">&#10095;</button>
+    </div>
+    <div class="galleryV2-dots" id="galleryV2Dots"></div>
   </section>
+</section>
 
 
   <footer>
@@ -294,6 +361,75 @@
   <script src="/js/mainExploratory.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="/js/multSpeciesModal.js"></script>
+  <script>
+/* ================================
+   GALERIA V2 - LÓGICA
+================================ */
+
+(function () {
+  const carousel = document.getElementById("galleryV2Carousel");
+  const leftBtn = document.querySelector(".galleryV2-btn.left");
+  const rightBtn = document.querySelector(".galleryV2-btn.right");
+  const dotsWrap = document.getElementById("galleryV2Dots");
+
+  if (!carousel) return;
+
+  const items = Array.from(carousel.children);
+
+  // criar dots
+  items.forEach((_, i) => {
+    const dot = document.createElement("button");
+    if (i === 0) dot.classList.add("active");
+    dot.dataset.index = i;
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.children);
+
+  // scroll por card
+  const cardWidth = items[0].offsetWidth + 22;
+
+  leftBtn.onclick = () => {
+    carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+  };
+
+  rightBtn.onclick = () => {
+    carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+  };
+
+  // atualizar dots
+  function updateDots() {
+    const center = carousel.scrollLeft + carousel.clientWidth / 2;
+
+    let activeIndex = 0;
+    items.forEach((item, i) => {
+      const mid = item.offsetLeft + item.clientWidth / 2;
+      if (Math.abs(mid - center) < Math.abs(items[activeIndex].offsetLeft + items[activeIndex].clientWidth / 2 - center)) {
+        activeIndex = i;
+      }
+    });
+
+    dots.forEach(d => d.classList.remove("active"));
+    dots[activeIndex].classList.add("active");
+  }
+
+  carousel.addEventListener("scroll", () => {
+    clearTimeout(carousel._scrollTimer);
+    carousel._scrollTimer = setTimeout(updateDots, 80);
+  });
+
+  // dots -> mover carousel
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = Number(dot.dataset.index);
+      carousel.scrollTo({
+        left: items[index].offsetLeft - 20,
+        behavior: "smooth"
+      });
+    });
+  });
+})();
+</script>
 </body>
 
 </html>

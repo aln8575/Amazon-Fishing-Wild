@@ -65,7 +65,7 @@
       <div class="header__content">
         <h3 class="section__subheader">TRIP HOSTED BY WELLINGTON MELO</h3>
         <h2 class="section__header">
-          EXPLORE THE FISHES OF THE WILD AMAZON
+          Fly into the Amazon Jungle for some incredible glamping and fishing adventure. Deep and fast waters hold a lot of surprises, waiting for you!<br>Only with us</br>
         </h2>
         <div class="scroll__btn">
           <a href="#about">
@@ -86,7 +86,7 @@
       <!-- Primeiro Bloco -->
       <div class="about__content about__content-1">
         <h3 class="section__subheader">GET STARTED</h3>
-        <h2 class="section__header">How our exploratory trip works</h2>
+        <h2 class="section__headerTitle">How our exploratory trip works</h2>
         <p class="textAboutExploratory">A Journey into a Treasure Trove of Nature’s Wonders</p>
         <label for="modal-toggle-1" class="button_slide slide_right" onclick="openModal('modal-1')">Read more
           <span><i class="ri-arrow-right-line"></i></span>
@@ -129,7 +129,7 @@
 
       <div class="about__content about__content-2">
         <h3 class="section__subheader">Accommodations</h3>
-        <h2 class="section__header">Our Extraordinary Wilderness Accommodations</h2>
+        <h2 class="section__headerTitle">Our Extraordinary Wilderness Accommodations</h2>
         <p class="textAboutExploratory">Nobody creates a better Temporary Jungle Home! Our most versatile Exploratory
           tool is our Safari Camp operation...</p>
         <label for="modal-toggle-2" class="button_slide slide_right" onclick="openModal('modal-2')">Read more
@@ -172,7 +172,7 @@
       <!-- Terceiro Bloco -->
 <div class="about__content about__content-3">
         <h3 class="section__subheader">ITINERARY</h3>
-        <h2 class="section__header">Calendar | Itinerary</h2>
+        <h2 class="section__headerTitle">Calendar | Itinerary</h2>
         <a href="calendarioExploratory.html" class="button_slide slide_right">Read more<span><i
               class="ri-arrow-right-line"></i></span></a>
         <div class="modal" id="modal-3">
@@ -189,7 +189,7 @@
       </div>
       <div class="about__content about__content-4">
         <h3 class="section__subheader">Folder</h3>
-        <h2 class="section__header">Download Digital Brochure</h2>
+        <h2 class="section__headerTitle">Download Digital Brochure</h2>
         <label for="modal-toggle-4" class="button_slide slide_right" onclick="openModal('modal-4')">Read more
           <span><i class="ri-arrow-right-line"></i></span>
         </label>
@@ -207,6 +207,62 @@
       </div>
     </div>
   
+
+      <section class="galleryV2-section">
+    <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
+    <p class="galleryV2-subtitle">
+      Stunning moments captured during our exclusive Exploratory Trip expeditions.
+    </p>
+
+    <div class="galleryV2-wrapper">
+      <button class="galleryV2-btn left" aria-label="Previous">&#10094;</button>
+
+      <div class="galleryV2-carousel" id="galleryV2Carousel">
+        <div class="galleryV2-item">
+          <img src="assets/explo.jpeg" alt="Fishing Image 1">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo2.jpeg" alt="Fishing Image 2">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo3.jpeg" alt="Fishing Image 3">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo4.jpeg" alt="Fishing Image 4">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo5.jpeg" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/explo6.jpeg" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/explo7.jpeg" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/explo8.jpeg" alt="Fishing Image 5">
+        </div>
+                <div class="galleryV2-item">
+          <img src="assets/explo9.jpeg" alt="Fishing Image 5">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo10.jpeg" alt="Fishing Image 5">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo11.jpeg" alt="Fishing Image 5">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo12.jpeg" alt="Fishing Image 5">
+        </div>
+        <div class="galleryV2-item">
+          <img src="assets/explo13.jpeg" alt="Fishing Image 5">
+        </div>
+        
+      </div>
+      <button class="galleryV2-btn right" aria-label="Next">&#10095;</button>
+    </div>
+    <div class="galleryV2-dots" id="galleryV2Dots"></div>
+  </section>
   </section>
 
 
@@ -232,7 +288,7 @@
                 pricing</p>
 
             </li>
-              <p class="price">Exploratory Trip Price: <span class="price">U$ 8.950,00</span></p>
+              <p class="price">RIO JARI Exploratory  Trip Price: <span class="price">U$ 8.950,00</span></p>
             <li><a href="index.html#contact">Contact Us</a></li>
             <li>
               <a class="textContatoWppAbout"
@@ -277,6 +333,76 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="/js/mainExploratory.js"></script>
   <script src="/js/multSpeciesModal.js"></script>
+  <script>
+/* ================================
+   GALERIA V2 - LÓGICA
+================================ */
+
+(function () {
+  const carousel = document.getElementById("galleryV2Carousel");
+  const leftBtn = document.querySelector(".galleryV2-btn.left");
+  const rightBtn = document.querySelector(".galleryV2-btn.right");
+  const dotsWrap = document.getElementById("galleryV2Dots");
+
+  if (!carousel) return;
+
+  const items = Array.from(carousel.children);
+
+  // criar dots
+  items.forEach((_, i) => {
+    const dot = document.createElement("button");
+    if (i === 0) dot.classList.add("active");
+    dot.dataset.index = i;
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.children);
+
+  // scroll por card
+  const cardWidth = items[0].offsetWidth + 22;
+
+  leftBtn.onclick = () => {
+    carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+  };
+
+  rightBtn.onclick = () => {
+    carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+  };
+
+  // atualizar dots
+  function updateDots() {
+    const center = carousel.scrollLeft + carousel.clientWidth / 2;
+
+    let activeIndex = 0;
+    items.forEach((item, i) => {
+      const mid = item.offsetLeft + item.clientWidth / 2;
+      if (Math.abs(mid - center) < Math.abs(items[activeIndex].offsetLeft + items[activeIndex].clientWidth / 2 - center)) {
+        activeIndex = i;
+      }
+    });
+
+    dots.forEach(d => d.classList.remove("active"));
+    dots[activeIndex].classList.add("active");
+  }
+
+  carousel.addEventListener("scroll", () => {
+    clearTimeout(carousel._scrollTimer);
+    carousel._scrollTimer = setTimeout(updateDots, 80);
+  });
+
+  // dots -> mover carousel
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = Number(dot.dataset.index);
+      carousel.scrollTo({
+        left: items[index].offsetLeft - 20,
+        behavior: "smooth"
+      });
+    });
+  });
+})();
+</script>
+  
 </body>
 
 </html>

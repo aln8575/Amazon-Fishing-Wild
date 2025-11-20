@@ -67,11 +67,19 @@
     z-index: -1;
 }
 
+.section__headerTitle{
+    margin-bottom: 1rem;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: #000000;
+}
+
 .section__header {
     margin-bottom: 1rem;
     font-size: 33px;
-    font-weight: 400;
-    font-family: var(--header-font);
+    font-weight: 100;
+    font-family: fantasy;
     color: #000000;
 }
 
@@ -102,6 +110,42 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.header__content .section__header,
+.header__content p,
+.header__content a {
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+@media (max-width: 768px) {
+    .header__content .section__header {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .header::after {
+        background: rgba(0, 0, 0, 0.60);
+    }
+}
+
+
+.header__content .section__header {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 15rem);
+    background: rgba(0, 0, 0, 0.45); /* ajuste: 0.45–0.70 */
     z-index: -1;
 }
 
@@ -119,10 +163,10 @@ body {
 }
 
 .header__content .section__header {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 100;
     color: white;
-    line-height: 5rem;
+    line-height: 3rem;
 }
 
 .header__content a {
@@ -608,14 +652,13 @@ body {
     border-radius: 40px;
     padding: 14px 30px;
     display: inline-block;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: auto;
     font-size: 20px;
     letter-spacing: 1px;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 #000000;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
-    background: #909090;
 }
 
 .slide_down:hover {
@@ -623,7 +666,7 @@ body {
 }
 
 .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 #f8973a;
+    box-shadow: inset 400px 0 0 0 #ff8614;
 }
 
 .video-background {
@@ -901,9 +944,8 @@ footer {
   box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
   text-align: center;
   animation: zoomIn 0.4s ease forwards;
-
-  width: 90%;        /* ocupa 80% da tela */
-  margin: 40px auto; /* centraliza */
+  width: 90%;
+  margin: 40px auto;
   transform: scale(0.95);
 }
 
@@ -1156,4 +1198,123 @@ nav {
     justify-content: space-between;
     align-items: center;
     transition: background-color .3s;
+}
+
+/* ================================
+   GALERIA V2 - Moderna e Premium
+================================ */
+
+.galleryV2-section {
+  padding: 90px 0;
+  /* background: linear-gradient(180deg, #06272f, #031d22, #06272f); */
+  text-align: center;
+  color: #fff;
+}
+
+.galleryV2-title {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.galleryV2-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.galleryV2-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.galleryV2-carousel {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    scrollbar-width: none;
+}
+
+.galleryV2-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.galleryV2-item {
+    flex: 0 0 257px;
+    height: 260px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    transform: perspective(900px) rotateY(0);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    cursor: pointer;
+}
+
+.galleryV2-item:hover {
+  transform: perspective(900px) rotateY(-8deg) scale(1.03);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.galleryV2-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SETAS */
+.galleryV2-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #eee;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  transition: 0.2s;
+}
+
+.galleryV2-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.1) translateY(-50%);
+}
+
+.galleryV2-btn.left {
+  left: -15px;
+  z-index: 1;
+}
+
+.galleryV2-btn.right {
+  right: -15px;
+}
+
+/* DOTS */
+.galleryV2-dots {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.galleryV2-dots button {
+  width: 12px;
+  height: 12px;
+  background: #789;
+  border: none;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.galleryV2-dots button.active {
+  width: 32px;
+  border-radius: 10px;
+  background: #00ffc8;
 }

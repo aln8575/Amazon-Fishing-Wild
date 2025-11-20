@@ -57,11 +57,11 @@
     </nav>
   </header>
 
-      <div class="video-background">
-      <video autoplay muted loop>
-        <source src="/videos/videoGuariba.mp4" type="video/mp4">
-      </video>
-    </div>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="/videos/videoGuariba.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <div class="section__container header__container">
     <div class="header__content">
@@ -229,6 +229,58 @@
         </div>
       </div>
     </div>
+
+    <section class="galleryV2-section">
+      <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
+      <p class="galleryV2-subtitle">
+        Stunning moments captured during our exclusive sport fishing expeditions.
+      </p>
+
+      <div class="galleryV2-wrapper">
+        <button class="galleryV2-btn left" aria-label="Previous">&#10094;</button>
+
+        <div class="galleryV2-carousel" id="galleryV2Carousel">
+          <div class="galleryV2-item">
+            <img src="assets/peacockbassPeixe1.jpeg" alt="Fishing Image 1">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacockbassPeixe2.jpeg" alt="Fishing Image 2">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacockbassPeixe3.jpeg" alt="Fishing Image 3">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacockbassPeixe4.jpeg" alt="Fishing Image 4">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacockbassPeixe5.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock5.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock6.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock7.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock1.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock2.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock3.jpeg" alt="Fishing Image 5">
+          </div>
+          <div class="galleryV2-item">
+            <img src="assets/peacock4.jpeg" alt="Fishing Image 5">
+          </div>
+        </div>
+        <button class="galleryV2-btn right" aria-label="Next">&#10095;</button>
+      </div>
+      <div class="galleryV2-dots" id="galleryV2Dots"></div>
+    </section>
   </section>
 
   <footer>
@@ -302,6 +354,76 @@
   <script src="/js/multSpeciesModal.js"></script>
   <script
     id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/f963dcc1aa47a109fc7419161/d5835ed4814c45f7c7f6d09bc.js");</script>
+
+  <script>
+    /* ================================
+       GALERIA V2 - LÓGICA
+    ================================ */
+
+    (function () {
+      const carousel = document.getElementById("galleryV2Carousel");
+      const leftBtn = document.querySelector(".galleryV2-btn.left");
+      const rightBtn = document.querySelector(".galleryV2-btn.right");
+      const dotsWrap = document.getElementById("galleryV2Dots");
+
+      if (!carousel) return;
+
+      const items = Array.from(carousel.children);
+
+      // criar dots
+      items.forEach((_, i) => {
+        const dot = document.createElement("button");
+        if (i === 0) dot.classList.add("active");
+        dot.dataset.index = i;
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsWrap.children);
+
+      // scroll por card
+      const cardWidth = items[0].offsetWidth + 22;
+
+      leftBtn.onclick = () => {
+        carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      };
+
+      rightBtn.onclick = () => {
+        carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+      };
+
+      // atualizar dots
+      function updateDots() {
+        const center = carousel.scrollLeft + carousel.clientWidth / 2;
+
+        let activeIndex = 0;
+        items.forEach((item, i) => {
+          const mid = item.offsetLeft + item.clientWidth / 2;
+          if (Math.abs(mid - center) < Math.abs(items[activeIndex].offsetLeft + items[activeIndex].clientWidth / 2 - center)) {
+            activeIndex = i;
+          }
+        });
+
+        dots.forEach(d => d.classList.remove("active"));
+        dots[activeIndex].classList.add("active");
+      }
+
+      carousel.addEventListener("scroll", () => {
+        clearTimeout(carousel._scrollTimer);
+        carousel._scrollTimer = setTimeout(updateDots, 80);
+      });
+
+      // dots -> mover carousel
+      dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+          const index = Number(dot.dataset.index);
+          carousel.scrollTo({
+            left: items[index].offsetLeft - 20,
+            behavior: "smooth"
+          });
+        });
+      });
+    })();
+  </script>
 
 </body>
 
