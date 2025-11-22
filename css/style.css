@@ -45,6 +45,11 @@
         border-radius: 2%;
     }
 
+    .destination__grid {
+    gap: 0;
+    display: grid;
+}
+
     .nameDestaque {
         width: 100px;
         color: rgb(255, 255, 255);
@@ -74,6 +79,12 @@
         flex: 0 0 33%;
         max-width: 33%;
     }
+
+    .destination__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
 
     .destination__card img {
         width: 100%;
@@ -253,23 +264,10 @@ header h1 {
     color: white;
 }
 
-.btn {
-    padding: 0.75rem 1.5rem;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
 
 img {
     width: 100%;
     display: flex;
-}
-
-a {
-    text-decoration: none;
 }
 
 .discover__btn {
@@ -570,7 +568,7 @@ a {
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -591,9 +589,14 @@ a {
 }
 
 .nav__toggle {
-    position: relative;
-    width: 32px;
-    height: 32px;
+    position: fixed;
+    top: 0;
+    margin-left: 130px;
+    width: 100%;
+    height: 15vh;
+    overflow-y: auto;
+    z-index: 9999;
+    transition: transform .3s ease;
 }
 
 .nav__burger,
@@ -603,7 +606,7 @@ a {
     height: max-content;
     inset: 0;
     margin: auto;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     cursor: pointer;
     transition: opacity .1s, transform .4s;
 }
@@ -652,7 +655,7 @@ a {
 
 .show-menu {
     opacity: 1;
-    top: 5.5rem;
+    top: 6.5rem;
     pointer-events: initial;
 }
 
@@ -944,7 +947,7 @@ footer {
 
 .containerR {
     max-width: var(--max-width);
-    min-height: 100vh;
+    min-height: 84vh;
     margin: auto;
     padding: 1rem;
     display: flex;
@@ -997,7 +1000,7 @@ nav {
 }
 
 .content h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     font-size: 4.5rem;
     font-weight: 800;
     color: var(--white);
@@ -1005,8 +1008,8 @@ nav {
 
 .content p {
     max-width: 350px;
-    margin-bottom: 2rem;
-    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 17px;
     color: var(--white);
 }
 
@@ -1021,14 +1024,19 @@ nav {
     cursor: pointer;
 }
 
-.destination__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.btnCards{
+    padding: 8px 11px;
+    outline: none;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    display: inline-block;
 }
 
 .destination__card {
-    height: 100%;
+    height: 96%;
     border-radius: 16px;
     background-color: var(--white);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
@@ -1046,10 +1054,11 @@ nav {
 }
 
 .card__content p {
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
     font-size: 0.9rem;
-    line-height: 1.5rem;
-    color: var(--text-light);
+    line-height: 19px;
+    color: #3b5b89;
+    font-weight: 500;
 }
 
 .card__content .btn {
@@ -1088,7 +1097,7 @@ nav {
     }
 
     .content h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .destination__grid {
