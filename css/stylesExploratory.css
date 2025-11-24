@@ -31,7 +31,14 @@
     box-sizing: border-box;
 }
 
-
+.section__title {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--white);
+    margin-bottom: -4.1rem;
+    margin-top: 100px;
+}
 
 .section__subheader {
     position: relative;
@@ -42,7 +49,7 @@
     font-weight: 600;
     letter-spacing: 2px;
     color: #ffffff;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .section__subheader::before {
@@ -68,20 +75,13 @@
     z-index: -1;
 }
 
-.section__headerTitle{
-    margin-bottom: 0rem;
-    font-size: 1.4rem;
-    font-weight: 800;
-    font-family: var(--header-font);
-    color: var(--white);
-}
 
 .section__header {
-    margin-bottom: 1rem;
-    font-size: 33px;
-    font-weight: 100;
-    /* font-family: fantasy; */
-    color: #000000;
+    margin-bottom: 0rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: var(--header-font);
+    color: var(--white);
 }
 
 img {
@@ -156,11 +156,12 @@ body {
 }
 
 .header__content .section__header {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 900;
     font-family: var(--header-font);
     color: white;
-    line-height: 30px;
+    line-height: 25px;
+    padding: 10px
 }
 
 .header__content a {
@@ -197,11 +198,10 @@ body {
 }
 
 .about__container {
-padding-top: 40px;
     display: grid;
     gap: 0rem 2rem;
     overflow: hidden;
-    margin-top: 100px;
+    padding: 40px 10px;
 }
 
 .about__image img {
@@ -714,6 +714,10 @@ video {
     z-index: 1;
 }
 
+.emailLink {
+color: blue;
+}
+
 .textSobreConfortos {
     color: white;
     font-family: var(--header-font);
@@ -721,8 +725,9 @@ video {
 
 .header__content a {
     color: var(--white);
-    font-size: 26px;
 }
+
+
 
 .header__content a:hover {
     color: var(--white);
@@ -731,14 +736,15 @@ video {
 }
 
 .scroll__btn {
-    font-size: 23px;
+    font-size: 18px;
     background: #f8973a;
     margin: 5px;
     padding: 8px;
-    width: 201px;
+    width: 145px;
     border-radius: 13px;
-    margin-left: 0px;
+    margin-left: 10px;
 }
+
 
 .price span {
     color: #08ff00;
@@ -759,12 +765,25 @@ video {
     color: #4caf50;
 }
 
-.numberTel {
+.titleExploratory {
     color: white;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+    margin-bottom: 10px;
+}
+
+.numberTel {
+    color: rgb(0, 17, 255)!important;
 }
 
 .numberTel:hover {
     color: #106eea;
+}
+
+.emailLink {
+color: blue;
 }
 
 a {
@@ -1144,7 +1163,7 @@ nav {
 /* --- MOBILE --- */
 .nav__toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   user-select: none;
@@ -1219,7 +1238,7 @@ nav {
 }
 
 .galleryV2-title {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
   font-weight: 700;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);

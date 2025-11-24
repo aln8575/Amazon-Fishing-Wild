@@ -66,10 +66,12 @@
 
 .section__header {
     margin-bottom: 7px;
-    font-size: 1.8rem;
-    font-weight: 400;
-    font-family: var(--header-font);
-    color: var(--white);
+    font-size: 1.6rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+    color: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .section__headerData {
@@ -420,7 +422,7 @@ footer {
     .about__container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        gap: 5rem 2rem;
+        gap: 3rem 2rem;
     }
 
     .about__image-1 {
@@ -586,11 +588,11 @@ footer {
 
 @media (min-width:768px) {
     .imgModal {
-        width: 363px;
+        width: 250px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 28px;
-        height: 441px;
+        height: 306px;
         object-fit: cover;
     }
 
@@ -706,6 +708,18 @@ footer {
     color: #ffffff;
     border-radius: 100px;
     padding: 8px;
+}
+
+.numberTel {
+    color: rgb(47, 0, 255)!important;
+}
+
+.numberTel:hover {
+    color: #106eea;
+}
+
+.emailLink {
+color: blue;
 }
 
 .video-container {
@@ -917,6 +931,7 @@ a:hover {
     top: 5.5rem;
     pointer-events: initial;
 }
+
 
 .show-icon .nav__burger {
     opacity: 0;
@@ -1134,7 +1149,7 @@ nav {
 /* --- MOBILE --- */
 .nav__toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   user-select: none;

@@ -150,12 +150,13 @@ body {
 
 .header__content {
     max-width: 700px;
+    padding: 10px;
 }
 
 .header__content .section__header {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-weight: 600;
-    line-height: 5rem;
+    line-height: 2rem;
 }
 
 .header__content a {
@@ -192,11 +193,11 @@ body {
 }
 
 .about__container {
-    padding-top: 40px;
     display: grid;
-    gap: 5rem 2rem;
+    gap: 2rem 2rem;
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 41px;
+    padding: 20px;
 }
 
 .about__image img {
@@ -656,7 +657,7 @@ body {
     color: black;
     border: 2px solid rgb(255 255 255);
     border-radius: 40px;
-    padding: 11px 11px;
+    padding: 7px 7px;
     display: inline-block;
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 15px;
@@ -672,7 +673,7 @@ body {
     color: black;
     border: 2px solid rgb(255 255 255);
     border-radius: 40px;
-    padding: 11px 11px;
+    padding: 7px 7px;
     font-weight: 100;
     display: inline-block;
     font-family: "Lucida Console", Monaco, monospace;
@@ -752,11 +753,11 @@ video {
 }
 
 .scroll__btn {
-    font-size: 23px;
+    font-size: 18px;
     background: #33ae3f;
     margin: 5px;
     padding: 8px;
-    width: 198px;
+    width: 145px;
     border-radius: 13px;
     margin-left: 0px;
 }
@@ -768,11 +769,15 @@ video {
 }
 
 .numberTel {
-    color: white;
+    color: rgb(47, 0, 255)!important;
 }
 
 .numberTel:hover {
     color: #106eea;
+}
+
+.emailLink {
+color: blue;
 }
 
 a {
@@ -1168,7 +1173,7 @@ nav {
 /* --- MOBILE --- */
 .nav__toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   user-select: none;
