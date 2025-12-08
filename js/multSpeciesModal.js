@@ -100,3 +100,41 @@ const navMenu = document.getElementById("nav-menu");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
+
+
+const images = document.querySelectorAll(".gallery img");
+const modal = document.getElementById("lightbox");
+const modalImg = document.getElementById("lightboxImg");
+
+let currentIndex = 0;
+
+// Abrir modal
+images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        currentIndex = index;
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+    });
+});
+
+// Navegar -> próximo
+document.getElementById("lightboxNext").onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex].src;
+};
+
+// Navegar -> anterior
+document.getElementById("lightboxPrev").onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex].src;
+};
+
+// Fechar no X
+document.getElementById("lightboxClose").onclick = () => {
+    modal.style.display = "none";
+};
+
+// Fechar clicando fora
+modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+};

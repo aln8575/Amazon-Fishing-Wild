@@ -144,17 +144,17 @@ body{
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004;
+    text-shadow: 0 5px 10px #000000;
 }
 
 .slider .list .item .content .title,
 .slider .list .item .content .type{
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     line-height: 1.3em;
 }
 .slider .list .item .type{
-    color: #14ff72cb;
+    color: #ffffff;
 }
 .slider .list .item .button{
     display: grid;
@@ -705,7 +705,7 @@ nav {
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .nav__menu {

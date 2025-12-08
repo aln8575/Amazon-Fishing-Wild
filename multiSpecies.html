@@ -54,7 +54,7 @@
                 <li><a href="sobre.html" class="dropdown__link"> Meet Wellington Melo</a></li>
               </ul>
             </li>
-            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="index.html" class="nav__link">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -108,9 +108,9 @@
           <div class="modal-content">
             <h2 class="section__header">About the Guariba River</h2>
             <p>In this unique and exclusive fishery, seekers of nature’s untamed essence find
-themselves immersed in a true paradise. The rio Gauriba is the pinnacle of freshwater
-fishing experiences.</p>
-            <div class="imgContainerModal">
+            themselves immersed in a true paradise. The rio Gauriba is the pinnacle of freshwater
+            fishing experiences.</p>
+            <div class="imgContainerModal gallery">
               <img src="/assets/guaribaLodge.jpg" class="imgModal" alt="">
               <img src="/assets/amazoniaBanner.png" class="imgModal" alt="">
               <img src="/assets/peacockBassGirl.jpg" class="imgModal" alt="">
@@ -151,7 +151,7 @@ fishing experiences.</p>
             <p class="textoSobre"><br>A full-service facility with high-level amenities<br>Private cabins for up to 8
               anglers<br>Spacious couple's suites<br> Individual air-conditioners<br>Internet WIFI by Starlink<br>Open
               bar and all-inclusive restaurant<br>Upriver Satellite Camp.</p>
-            <div class="imgContainerModal">
+            <div class="imgContainerModal gallery">
               <img src="/assets/guaribaLodge.jpg" class="imgModal" alt="">
               <img src="/assets/imgMultSpeciesCard.jpg" class="imgModal" alt="">
               <img src="/assets/bannerInformation.jpg" class="imgModal" alt="">
@@ -186,7 +186,7 @@ fishing experiences.</p>
         <div class="modal" id="modal-3">
           <div class="modal-content">
             <h2 class="tituloModal">ITINERARY MULTI-SPECIES VARIETY TRIP</h2>
-            <div class="imgContainerModal">
+            <div class="imgContainerModal gallery">
             </div>
             <span class="close-button" onclick="closeModal('modal-3')">Close</span>
           </div>
@@ -212,13 +212,27 @@ fishing experiences.</p>
       </div>
     </div>
 
+
+<!-- LIGHTBOX GLOBAL -->
+<div class="lightbox-modal" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <img id="lightboxImg" src="">
+    <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
     <section class="galleryV2-section">
     <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
     <p class="galleryV2-subtitle">
       Stunning moments captured during our exclusive Multi-Species expeditions.
     </p>
 
-    <div class="galleryV2-wrapper">
+    <div class="galleryV2-wrapper gallery">
       <button class="galleryV2-btn left" aria-label="Previous">&#10094;</button>
 
       <div class="galleryV2-carousel" id="galleryV2Carousel">
@@ -282,7 +296,6 @@ fishing experiences.</p>
     <div class="galleryV2-dots" id="galleryV2Dots"></div>
   </section>
 </section>
-
 
   <footer>
     <div class="footer-container">

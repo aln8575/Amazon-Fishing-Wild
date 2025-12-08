@@ -72,3 +72,26 @@ ScrollReveal().reveal(".about__content .about__btn", {
   ...scrollRevealOption,
   delay: 2000,
 });
+
+
+// Navegar -> próximo
+document.getElementById("lightboxNext").onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex].src;
+};
+
+// Navegar -> anterior
+document.getElementById("lightboxPrev").onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex].src;
+};
+
+// Fechar no X
+document.getElementById("lightboxClose").onclick = () => {
+    modal.style.display = "none";
+};
+
+// Fechar clicando fora
+modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+};

@@ -588,11 +588,11 @@ footer {
 
 @media (min-width:768px) {
     .imgModal {
-        width: 250px;
+        width: 200px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 28px;
-        height: 306px;
+        height: 250px;
         object-fit: cover;
     }
 
@@ -711,7 +711,7 @@ footer {
 }
 
 .numberTel {
-    color: rgb(47, 0, 255)!important;
+    color: rgb(0, 170, 255)!important;
 }
 
 .numberTel:hover {
@@ -719,7 +719,7 @@ footer {
 }
 
 .emailLink {
-color: blue;
+color: rgb(0, 170, 255);
 }
 
 .video-container {
@@ -1320,4 +1320,71 @@ nav {
   width: 32px;
   border-radius: 10px;
   background: #00ffc8;
+}
+
+
+/* Galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+   
+    border-radius: 10px;
+    cursor: zoom-in;
+    transition: .2s;
+}
+
+.gallery img:hover {
+    opacity: .7;
+}
+
+/* Modal Lightbox */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-modal img {
+    max-width: 72%;
+    max-height: 88vh;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 55px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.lightbox-prev { left: 40px; }
+.lightbox-next { right: 40px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: #ccc;
 }
