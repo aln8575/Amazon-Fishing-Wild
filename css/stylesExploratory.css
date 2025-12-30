@@ -1429,10 +1429,10 @@ nav {
 }
 
 .lightbox-modal img {
-    max-width: 53%;
-    max-height: 67vh;
+    max-width: 60%;
+    max-height: 80%;
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: contain;
 }
 
 .lightbox-close {
