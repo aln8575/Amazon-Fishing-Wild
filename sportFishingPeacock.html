@@ -15,6 +15,24 @@
   <title>Giant Peacock Bass Trip</title>
 </head>
 
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <span class="video-close" onclick="closeVideoModal()">&times;</span>
+
+    <div class="video-wrapper">
+      <iframe
+        id="youtubeFrame"
+        src=""
+        title="Amazon Multi Species Trip"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 <body>
   <header class="header" id="home">
     <nav>
@@ -74,6 +92,14 @@
           Scroll down
           <span><i class="ri-arrow-down-line"></i></span>
         </a>
+      </div>
+
+      <!-- WATCH EXPERIENCE -->
+      <div class="watch-experience">
+        <button class="watch-btn" onclick="openVideoModal()">
+          <i class="ri-play-circle-fill"></i>
+          Watch the Experience
+        </button>
       </div>
       <div class="header__socials">
         <span>Follow us</span>
@@ -411,6 +437,24 @@
         });
       });
     })();
+
+     function openVideoModal() {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("youtubeFrame");
+
+  iframe.src =
+    "https://www.youtube-nocookie.com/embed/AHZfecemQhM?autoplay=1&rel=0";
+  modal.style.display = "flex";
+} 
+
+function closeVideoModal() {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("youtubeFrame");
+
+  iframe.src = "";
+  modal.style.display = "none";
+}
+
   </script>
 
 </body>
