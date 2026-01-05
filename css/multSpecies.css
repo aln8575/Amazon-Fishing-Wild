@@ -877,11 +877,11 @@ video {
 }
 
 .scroll__btn {
-    font-size: 23px;
+    font-size: 18px;
     background: #33ae3f;
     margin: 5px;
     padding: 8px;
-    width: 198px;
+    width: 145px;
     border-radius: 13px;
     margin-left: 0px;
 }
