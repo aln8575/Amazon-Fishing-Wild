@@ -13,6 +13,24 @@
   <title>Exploratory</title>
 </head>
 
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <span class="video-close" onclick="closeVideoModal()">&times;</span>
+
+    <div class="video-wrapper">
+      <iframe
+        id="youtubeFrame"
+        src=""
+        title="Amazon Multi Species Trip"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 <body>
   <header class="header" id="home">
     <nav>
@@ -74,6 +92,14 @@
             <span><i class="ri-arrow-down-line"></i></span>
           </a>
         </div>
+              <!-- WATCH EXPERIENCE -->
+      <div class="watch-experience">
+        <button class="watch-btn" onclick="openVideoModal()">
+          <i class="ri-play-circle-fill"></i>
+          Watch the Experience
+        </button>
+      </div>
+      
         <div class="header__socials">
           <span>Follow us</span>
           <a href="https://www.instagram.com/fishingwell_afw/"><i class="ri-instagram-line"></i></a>
@@ -436,6 +462,33 @@
     });
   });
 })();
+
+
+function openVideoModal() {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("youtubeFrame");
+
+  const embedUrl =
+    "https://www.youtube.com/embed/ay3I3xC_iIM?autoplay=1&rel=0";
+
+  iframe.src = embedUrl;
+  modal.style.display = "flex";
+
+  // Se o vídeo não carregar (bloqueado), abre no YouTube
+  iframe.onerror = () => {
+    closeVideoModal();
+    window.open("https://youtu.be/ay3I3xC_iIM", "_blank");
+  };
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("youtubeFrame");
+
+  iframe.src = "";
+  modal.style.display = "none";
+}
+
 </script>
   
 </body>
