@@ -2,26 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- SEO -->
   <meta name="description" content="27 Years of Fishing Expertise: Experience the Difference">
   <meta name="keywords"
     content="Amazon Fishing Wild, fishing wild, peacock, peacock bass trip, multi species trip, multi species, fishing, amazon trips, exploratory trip, giant peacock bass">
-  <link rel="stylesheet" href="/css/multSpecies.css" />
-  <link rel="stylesheet" href="/js/multSpeciesModal.js" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
+  <!-- CSS (cache busting) -->
+  <link rel="stylesheet" href="/css/multSpecies.css?v=1.0.4" /> 
   <title>Multi Species</title>
 </head>
 
 
 
 <body>
-  
-<!-- VIDEO MODAL -->
+  <!-- VIDEO MODAL -->
 <div class="video-modal" id="videoModal">
   <div class="video-modal-content">
     <span class="video-close" onclick="closeVideoModal()">&times;</span>
@@ -89,6 +92,24 @@
         A unique Experience in the heart of the amazon
       </h1>
 
+      <!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <span class="video-close" onclick="closeVideoModal()">&times;</span>
+
+    <div class="video-wrapper">
+      <iframe
+        id="youtubeFrame"
+        src=""
+        title="Amazon Multi Species Trip"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
       <!-- <h1 class="section__headerData">Amazon Multi species trip season:<br> NOV - DEC - JAN</h1> -->
       <div class="scroll__btn">
         <a href="#about">
@@ -100,6 +121,7 @@
       <!-- WATCH EXPERIENCE -->
       <div class="watch-experience">
         <button class="watch-btn" onclick="openVideoModal()">
+          <i class="ri-play-circle-fill"></i>
           Watch the video
         </button>
       </div>
@@ -249,10 +271,6 @@
     <span class="lightbox-next" id="lightboxNext">&#10095;</span>
 </div>
 
-<script src="script.js"></script>
-</body>
-</html>
-
 
     <section class="galleryV2-section">
     <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
@@ -325,6 +343,12 @@
   </section>
 </section>
 
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
   <footer>
     <div class="footer-container">
       <div class="footer-about">
@@ -393,9 +417,13 @@
     id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/f963dcc1aa47a109fc7419161/d5835ed4814c45f7c7f6d09bc.js");</script>
   <script src="https://cdn.wetravel.com/widgets/embed_checkout.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="/js/mainExploratory.js"></script>
+  <script src="/js/mainExploratory.js?v=1.0.4"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="/js/multSpeciesModal.js"></script>
+  <script src="/js/multSpeciesModal.js?v=1.0.4"></script>
+
+
+
+  
   <script>
 /* ================================
    GALERIA V2 - LÓGICA
