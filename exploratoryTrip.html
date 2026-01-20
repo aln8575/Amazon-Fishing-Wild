@@ -477,7 +477,7 @@ function openVideoModal() {
   const iframe = document.getElementById("youtubeFrame");
 
   const embedUrl =
-    "https://www.youtube.com/embed/ay3I3xC_iIM?autoplay=1&rel=0";
+    "https://www.youtube.com/embed/jzcWxrLx_Gk?autoplay=1&rel=0";
 
   iframe.src = embedUrl;
   modal.style.display = "flex";
@@ -485,7 +485,7 @@ function openVideoModal() {
   // Se o vídeo não carregar (bloqueado), abre no YouTube
   iframe.onerror = () => {
     closeVideoModal();
-    window.open("https://youtu.be/ay3I3xC_iIM", "_blank");
+    window.open("https://youtu.be/jzcWxrLx_Gk", "_blank");
   };
 }
 

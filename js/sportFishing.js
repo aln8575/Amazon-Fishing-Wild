@@ -78,3 +78,20 @@ document.getElementById("lightboxClose").onclick = () => {
 modal.onclick = (e) => {
     if (e.target === modal) modal.style.display = "none";
 };
+
+
+
+  function showYear(year) {
+    document.querySelectorAll('.year-table').forEach(table => {
+      table.style.display = 'none';
+    });
+
+    document.getElementById('year-' + year).style.display = 'block';
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    event.target.classList.add('active');
+  }
+
