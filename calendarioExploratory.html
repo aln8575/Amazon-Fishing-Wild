@@ -98,7 +98,7 @@
       background: rgba(255, 255, 255, 0.35);
     }
 
-        .aeroIcon{
+    .aeroIcon {
       width: 30px;
       height: 30px;
     }
@@ -122,6 +122,28 @@
       font-size: 0.95rem;
       line-height: 1.5;
     }
+
+    .year-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tab-btn {
+      background: #fff;
+      border: 1px solid #000;
+      padding: 6px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .tab-btn.active {
+      background: #000;
+      color: #ff7b00;
+    }
+
 
     /* Button */
     .back-button {
@@ -160,49 +182,104 @@
   <div class="container">
     <h1>2026 Exploratory Trip Schedule</h1>
 
-    <table>
-      <caption>Rio Jari Exploratory – Multi-Species Glamping on an untouched wilderness river</caption>
-      <thead>
-        <tr>
-          <th>Trip #</th>
-          <th>Trip Start Date</th>
-          <th>Trip End Date</th>
-          <th>Availability</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Trip AJ-00</td>
-          <td>Tue. Oct. 13, 2026</td>
-          <td>Tue. Oct. 20, 2026</td>
-          <td>6 spaces</td>
-        </tr>
-        <tr>
-          <td>Trip AJ-01</td>
-          <td>Tue. Oct. 20, 2026</td>
-          <td>Tue. Oct. 27, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AJ-02</td>
-          <td>Tue. Oct. 27, 2026</td>
-          <td>Tue. Nov. 3, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AJ-03</td>
-          <td>Tue. Nov. 3, 2026</td>
-          <td>Tue. Nov. 10, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AJ-04</td>
-          <td>Tue. Nov. 10, 2026</td>
-          <td>Tue. Nov. 17, 2026</td>
-          <td>Open</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- YEAR BUTTONS -->
+    <div class="year-tabs">
+      <button class="tab-btn active" onclick="showYear('2026', this)">2026</button>
+      <button class="tab-btn" onclick="showYear('2027', this)">2027</button>
+    </div>
+
+    <div class="year-table" id="year-2026">
+      <table>
+        <caption>Rio Jari Exploratory – Multi-Species Glamping on an untouched wilderness river</caption>
+        <thead>
+          <tr>
+            <th>Trip #</th>
+            <th>Trip Start Date</th>
+            <th>Trip End Date</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trip AJ-00</td>
+            <td>Tue. Oct. 13, 2026</td>
+            <td>Tue. Oct. 20, 2026</td>
+            <td>6 spaces</td>
+          </tr>
+          <tr>
+            <td>Trip AJ-01</td>
+            <td>Tue. Oct. 20, 2026</td>
+            <td>Tue. Oct. 27, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AJ-02</td>
+            <td>Tue. Oct. 27, 2026</td>
+            <td>Tue. Nov. 3, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AJ-03</td>
+            <td>Tue. Nov. 3, 2026</td>
+            <td>Tue. Nov. 10, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AJ-04</td>
+            <td>Tue. Nov. 10, 2026</td>
+            <td>Tue. Nov. 17, 2026</td>
+            <td>Open</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="year-table" id="year-2027" style="display:none;">
+      <table>
+        <caption>2027 Exploratory Trip Schedule – Rio Jari</caption>
+        <thead>
+          <tr>
+            <th>Trip #</th>
+            <th>Trip Start Date</th>
+            <th>Trip End Date</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trip BJ-01</td>
+            <td>Tue. Oct. 12, 2027</td>
+            <td>Tue. Oct. 19, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BJ-02</td>
+            <td>Tue. Oct. 19, 2027</td>
+            <td>Tue. Oct. 26, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BJ-03</td>
+            <td>Tue. Oct. 26, 2027</td>
+            <td>Tue. Nov. 2, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BJ-04</td>
+            <td>Tue. Nov. 2, 2027</td>
+            <td>Tue. Nov. 9, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BJ-05</td>
+            <td>Tue. Nov. 9, 2027</td>
+            <td>Tue. Nov. 16, 2027</td>
+            <td>Open</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
 
     <div class="section-title">Amazon Fishing Wild – Trip Itinerary – All trips are one week at the fishery</div>
 
@@ -210,7 +287,8 @@
       <i class="fa-solid fa-plane-departure icon"></i>
       <div>
         <h3>Day X – Start Travel</h3>
-        <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your charter flight departure.</p>
+        <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your
+          charter flight departure.</p>
       </div>
     </div>
 
@@ -218,7 +296,8 @@
       <i class="fa-solid fa-hotel icon"></i>
       <div>
         <h3>Day 0 – Arrive Manaus</h3>
-        <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.</p>
+        <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.
+        </p>
       </div>
     </div>
 
@@ -226,7 +305,8 @@
       <img src="./assets/aeroBlack.png" alt="" class="aeroIcon">
       <div>
         <h3>Day 1 – Arrive Fishery</h3>
-        <p>Our staff will transfer you to your charter flight to the selected fishery where you will arrive around midday.</p>
+        <p>Our staff will transfer you to your charter flight to the selected fishery where you will arrive around
+          midday.</p>
       </div>
     </div>
 
@@ -238,7 +318,7 @@
       </div>
     </div>
 
-       <div class="day">
+    <div class="day">
       <i class="fa-solid fa-fish-fins icon"></i>
       <div>
         <h3>Days 2–7 – Fishing</h3>
@@ -250,7 +330,8 @@
       <i class="fa-solid fa-plane-arrival icon"></i>
       <div>
         <h3>Day 8 – Return Manaus</h3>
-        <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your selected international travel airline at the airport.</p>
+        <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your
+          selected international travel airline at the airport.</p>
       </div>
     </div>
 
@@ -264,6 +345,17 @@
 
     <a href="exploratoryTrip.html" class="back-button">← Back to Exploratory Trip</a>
   </div>
+
+  <script>
+    function showYear(year, btn) {
+      document.querySelectorAll('.year-table').forEach(div => div.style.display = 'none');
+      document.getElementById('year-' + year).style.display = 'block';
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+  </script>
 </body>
 
 </html>

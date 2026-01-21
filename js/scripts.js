@@ -100,3 +100,30 @@ const navMenu = document.getElementById("nav-menu");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
+
+
+const footerText = document.getElementById("footerText");
+
+// transforma o texto em spans
+const letters = footerText.innerText.split("");
+footerText.innerHTML = "";
+
+letters.forEach((letter, index) => {
+  const span = document.createElement("span");
+  span.textContent = letter === " " ? "\u00A0" : letter;
+  span.style.animationDelay = `${index * 0.03}s`;
+  footerText.appendChild(span);
+});
+
+// observer
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      footerText.classList.add("animate");
+      observer.disconnect(); // anima só uma vez
+    }
+  },
+  { threshold: 0.6 }
+);
+
+observer.observe(footerText);

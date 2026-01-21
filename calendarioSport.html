@@ -94,10 +94,10 @@
       color: #ffffff;
     }
 
-    .aeroIcon{
-    width: 30px;
-    height: 30px;
-    filter: drop-shadow(0 0 1px #b2f7a4);
+    .aeroIcon {
+      width: 30px;
+      height: 30px;
+      filter: drop-shadow(0 0 1px #b2f7a4);
     }
 
     td {
@@ -143,6 +143,13 @@
       line-height: 1.5;
     }
 
+    .separator-row td {
+      background: transparent;
+      border: none;
+      height: 25px;
+    }
+
+
     .back-button {
       display: block;
       margin: 40px auto 0;
@@ -167,13 +174,13 @@
 <body>
 
   <div class="container">
-
     <h1>Peacock Bass Trip Schedule</h1>
 
     <!-- YEAR BUTTONS -->
     <div class="year-tabs">
       <button class="tab-btn active" onclick="showYear('2026', this)">2026</button>
       <button class="tab-btn" onclick="showYear('2027', this)">2027</button>
+      <button class="tab-btn" onclick="showYear('2028', this)">2028</button>
     </div>
 
     <!-- ===== 2026 TABLE ===== -->
@@ -266,79 +273,168 @@
             <td>Wed. Feb. 3, 2027</td>
             <td>Open</td>
           </tr>
+
+
+          <tr class="separator-row">
+            <td colspan="4"></td>
+          </tr>
+
+          <tr>
+            <td>Trip BT-01</td>
+            <td>Wed. Oct. 6, 2027</td>
+            <td>Wed. Oct. 13, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BT-02</td>
+            <td>Wed. Oct. 13, 2027</td>
+            <td>Wed. Oct. 20, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BT-03</td>
+            <td>Wed. Oct. 20, 2027</td>
+            <td>Wed. Oct. 27, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BT-04</td>
+            <td>Wed. Oct. 27, 2027</td>
+            <td>Wed. Nov. 3, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BT-05</td>
+            <td>Wed. Nov. 3, 2027</td>
+            <td>Wed. Nov. 10, 2027</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip BT-06</td>
+            <td>Wed. Nov. 10, 2027</td>
+            <td>Wed. Nov. 17, 2027</td>
+            <td>Open</td>
+          </tr>
         </tbody>
       </table>
     </div>
+  
 
-    <div class="section-title">Amazon Fishing Wild – Trip Itinerary – All trips are one week at the fishery</div>
+    <!-- ===== 2028 TABLE ===== -->
+<div class="year-table" id="year-2028" style="display:none;">
+  <table>
+    <caption>2028 Tupana X – Peacock Bass Trip Schedule</caption>
+    <thead>
+      <tr>
+        <th>Trip #</th>
+        <th>Trip Start Date</th>
+        <th>Trip End Date</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Trip BT-16</td>
+        <td>Wed. Jan. 5, 2028</td>
+        <td>Wed. Jan. 12, 2028</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td>Trip BT-17</td>
+        <td>Wed. Jan. 12, 2028</td>
+        <td>Wed. Jan. 19, 2028</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td>Trip BT-18</td>
+        <td>Wed. Jan. 19, 2028</td>
+        <td>Wed. Jan. 26, 2028</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td>Trip BT-19</td>
+        <td>Wed. Jan. 26, 2028</td>
+        <td>Wed. Feb. 2, 2028</td>
+        <td>Open</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-    <div class="day">
-      <i class="fa-solid fa-plane-departure icon"></i>
-      <div>
-        <h3>Day X – Start Travel</h3>
-        <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before your
-          charter flight departure.</p>
-      </div>
+    
+        <div class="section-title">Amazon Fishing Wild – Trip Itinerary – All trips are one week at the fishery</div>
+
+        <div class="day">
+          <i class="fa-solid fa-plane-departure icon"></i>
+          <div>
+            <h3>Day X – Start Travel</h3>
+            <p>Depending on your selected travel route, leave home and arrive in Manaus sometime during the day before
+              your
+              charter flight departure.</p>
+          </div>
+        </div>
+
+        <div class="day">
+          <i class="fa-solid fa-hotel icon"></i>
+          <div>
+            <h3>Day 0 – Arrive Manaus</h3>
+            <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will
+              overnight.
+            </p>
+          </div>
+        </div>
+
+        <div class="day">
+          <img src="./assets/aeroIconGreenDois.png" alt="" class="aeroIcon">
+          <div>
+            <h3>Day 1 – Arrive Fishery Wednesday</h3>
+            <p>Our staff will transfer you to your charter flight and then board the luxury yacht, where you will arrive
+              around midday.</p>
+          </div>
+        </div>
+
+        <div class="day">
+          <i class="fa-solid fa-fish-fins icon"></i>
+          <div>
+            <h3>Days 2–7 – Fishing</h3>
+            <p>Full days of fishing for Peacock Bass and enjoying the Amazonian scenery aboard our luxury
+              accommodations.
+            </p>
+          </div>
+        </div>
+
+        <div class="day">
+          <i class="fa-solid fa-plane-arrival icon"></i>
+          <div>
+            <h3>Day 8 – Return Manaus</h3>
+            <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to
+              your
+              selected international airline at the airport.</p>
+          </div>
+        </div>
+
+        <div class="day">
+          <i class="fa-solid fa-house-chimney icon"></i>
+          <div>
+            <h3>Day XX – Return Home</h3>
+            <p>Travel home and cherish your Amazon adventure memories.</p>
+          </div>
+        </div>
+
+
+        <a href="sportFishingPeacock.html" class="back-button">← Back to Peacock Bass</a>
+
     </div>
 
-    <div class="day">
-      <i class="fa-solid fa-hotel icon"></i>
-      <div>
-        <h3>Day 0 – Arrive Manaus</h3>
-        <p>Our staff will pick you up at the airport and transfer you to our home base hotel where you will overnight.
-        </p>
-      </div>
-    </div>
+    <script>
+      function showYear(year, btn) {
+        document.querySelectorAll('.year-table').forEach(div => div.style.display = 'none');
+        document.getElementById('year-' + year).style.display = 'block';
 
-    <div class="day">
-      <img src="./assets/aeroIconGreenDois.png" alt="" class="aeroIcon">
-      <div>
-        <h3>Day 1 – Arrive Fishery Wednesday</h3>
-        <p>Our staff will transfer you to your charter flight and then board the luxury yacht, where you will arrive
-          around midday.</p>
-      </div>
-    </div>
-
-    <div class="day">
-      <i class="fa-solid fa-fish-fins icon"></i>
-      <div>
-        <h3>Days 2–7 – Fishing</h3>
-        <p>Full days of fishing for Peacock Bass and enjoying the Amazonian scenery aboard our luxury accommodations.
-        </p>
-      </div>
-    </div>
-
-    <div class="day">
-      <i class="fa-solid fa-plane-arrival icon"></i>
-      <div>
-        <h3>Day 8 – Return Manaus</h3>
-        <p>Our chartered flight will return you to Manaus and our staff will bring you to our home base hotel or to your
-          selected international airline at the airport.</p>
-      </div>
-    </div>
-
-    <div class="day">
-      <i class="fa-solid fa-house-chimney icon"></i>
-      <div>
-        <h3>Day XX – Return Home</h3>
-        <p>Travel home and cherish your Amazon adventure memories.</p>
-      </div>
-    </div>
-
-
-    <a href="sportFishingPeacock.html" class="back-button">← Back to Peacock Bass</a>
-
-  </div>
-
-  <script>
-    function showYear(year, btn) {
-      document.querySelectorAll('.year-table').forEach(div => div.style.display = 'none');
-      document.getElementById('year-' + year).style.display = 'block';
-
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    }
-  </script>
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    </script>
 
 </body>
 
