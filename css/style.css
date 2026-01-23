@@ -171,7 +171,7 @@ p.lead {
 
 .servicesProjects {
     margin-top: 69px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/bannerServicos.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/fundo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -184,7 +184,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/amazoniaBanner.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/fundo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -672,6 +672,7 @@ a {
     column-gap: .5rem;
     font-weight: var(--font-semi-bold);
     transition: background-color .3s;
+    border-radius: 4px;
 }
 
 .dropdown__link i,
@@ -790,7 +791,7 @@ a {
 
 .pai {
     font-family: "Montserrat", sans-serif;
-    background: linear-gradient(to right, rgba(2, 82, 89, 0.9), rgba(255, 255, 255, 0)), url("/assets/amazoniaBanner.png");
+    /* background: linear-gradient(to right, rgba(2, 82, 89, 0.9), rgba(255, 255, 255, 0)), url("/assets/fundo.png"); */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
