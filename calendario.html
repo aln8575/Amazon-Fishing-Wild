@@ -81,17 +81,18 @@
       background: rgba(18, 54, 31, 0.35);
     }
 
-    .aeroIcon{
+    .aeroIcon {
       width: 30px;
       height: 30px;
       filter: drop-shadow(0 0 5px #d4af37);
     }
 
     .icon {
-  color: #d4af37; /* dourado */
-  font-size: 30px;
-  filter: drop-shadow(0 0 5px #d4af37);
-}
+      color: #d4af37;
+      /* dourado */
+      font-size: 30px;
+      filter: drop-shadow(0 0 5px #d4af37);
+    }
 
 
     .icon {
@@ -132,6 +133,141 @@
       color: #0b1e13;
       box-shadow: 0 0 10px #d4af37;
     }
+
+    /* * ===== YEAR TABS ===== */
+    .year-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid #e8c95c;
+      color: #e8c95c;
+      padding: 8px 22px;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn:hover {
+      background-color: #e8c95c;
+      color: #082318;
+    }
+
+    .tab-btn.active {
+      background-color: #e8c95c;
+      color: #082318;
+      box-shadow: 0 0 10px rgba(232, 201, 92, 0.7);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 35px;
+      border: 1px solid #ffffff;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ffffff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0f2f22;
+      color: #ffffff;
+    }
+
+    .aeroIcon {
+      width: 30px;
+      height: 30px;
+      filter: drop-shadow(0 0 1px #b2f7a4);
+    }
+
+    td {
+      color: #fff8d0;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .section-title {
+      color: #b2f7a4;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 40px 0 25px;
+      text-align: center;
+      border-bottom: 2px solid #e8c95c;
+      padding-bottom: 6px;
+    }
+
+    .day {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px 20px;
+      border-left: 4px solid #b2f7a4;
+      border-radius: 6px;
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      color: #b2f7a4;
+    }
+
+    .day h3 {
+      margin: 0;
+      color: #b2f7a4;
+      font-size: 1.05rem;
+    }
+
+    .day p {
+      margin-top: 5px;
+      color: #fff8d0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .separator-row td {
+      background: transparent;
+      border: none;
+      height: 25px;
+    }
+
+
+    .back-button {
+      display: block;
+      margin: 40px auto 0;
+      text-align: center;
+      color: #e8c95c;
+      border: 1px solid #e8c95c;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    @media (max-width: 600px) {
+      .day {
+        flex-direction: column;
+      }
+
+    }
   </style>
 </head>
 
@@ -139,96 +275,156 @@
   <div class="container">
     <h1>2026 Multi-Species Trip Schedule</h1>
 
-    <table>
-      <caption>Guariba Lodge – Multi-Species – Luxurious Jungle Hotel – Monday Transfers</caption>
-      <thead>
-        <tr>
-          <th>Trip #</th>
-          <th>Trip Start Date</th>
-          <th>Trip End Date</th>
-          <th>Availability</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Trip AG-04</td>
-          <td>Mon. Sept. 21, 2026</td>
-          <td>Mon. Sept. 28, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AG-05</td>
-          <td>Mon. Sept. 28, 2026</td>
-          <td>Mon. Oct. 5, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AG-06</td>
-          <td>Mon. Oct. 5, 2026</td>
-          <td>Mon. Oct. 12, 2026</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>Trip AG-07</td>
-          <td>Mon. Oct. 12, 2026</td>
-          <td>Mon. Oct. 19, 2026</td>
-          <td>Open</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="section-title">Amazon Fishing Wild – Trip Itinerary</div>
-
-    <div class="day">
-      <i class="fa-solid fa-plane-departure icon"></i>
-      <div>
-        <h3>Day X – Start Travel</h3>
-        <p>Depending on your selected route, depart from home and arrive in Manaus the day before your charter flight.</p>
-      </div>
+    <!-- YEAR BUTTONS -->
+    <div class="year-tabs">
+      <button class="tab-btn active" onclick="showYear('2026', this)">2026</button>
+      <button class="tab-btn" onclick="showYear('2027', this)">2027</button>
     </div>
 
-    <div class="day">
-      <i class="fa-solid fa-hotel icon"></i>
-      <div>
-        <h3>Day 0 – Arrive in Manaus</h3>
-        <p>Our staff will meet you at the airport and transfer you to our base hotel for an overnight stay.</p>
-      </div>
+    <div class="year-table" id="year-2026">
+      <table>
+        <caption>Guariba Lodge – Multi-Species – Luxurious Jungle Hotel – Monday Transfers</caption>
+        <thead>
+          <tr>
+            <th>Trip #</th>
+            <th>Trip Start Date</th>
+            <th>Trip End Date</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trip AG-04</td>
+            <td>Mon. Sept. 21, 2026</td>
+            <td>Mon. Sept. 28, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AG-05</td>
+            <td>Mon. Sept. 28, 2026</td>
+            <td>Mon. Oct. 5, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AG-06</td>
+            <td>Mon. Oct. 5, 2026</td>
+            <td>Mon. Oct. 12, 2026</td>
+            <td>Open</td>
+          </tr>
+          <tr>
+            <td>Trip AG-07</td>
+            <td>Mon. Oct. 12, 2026</td>
+            <td>Mon. Oct. 19, 2026</td>
+            <td>Open</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="day">
-      <img src="./assets/iconHidroAero.png" alt="" class="aeroIcon">
-      <div>
-        <h3>Day 1 – Monday – Arrive at Fishery</h3>
-        <p>Transfer by charter flight to the selected fishery, arriving around midday.</p>
+      <!-- ===== 2027 TABLE ===== -->
+      <div class="year-table" id="year-2027" style="display:none;">
+        <table>
+          <caption>Guariba Lodge – Multi-Species – Luxurious Jungle Hotel – Monday Transfers</caption>
+          <thead>
+            <tr>
+              <th>Trip #</th>
+              <th>Trip Start Date</th>
+              <th>Trip End Date</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Trip BG-04</td>
+              <td>Mon. Sept. 20, 2027</td>
+              <td>Mon. Oct. 4, 2027</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Trip BG-05</td>
+              <td>Mon. Sept. 27, 2027</td>
+              <td>Mon. Oct. 4, 2027</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Trip BG-06</td>
+              <td>Mon. Oct. 4, 2027</td>
+              <td>Mon. Oct. 11, 2027</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Trip BG-07</td>
+              <td>Mon. Oct. 11, 2027</td>
+              <td>Mon. Oct. 18, 2027</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+
+      <div class="section-title">Amazon Fishing Wild – Trip Itinerary</div>
+
+      <div class="day">
+        <i class="fa-solid fa-plane-departure icon"></i>
+        <div>
+          <h3>Day X – Start Travel</h3>
+          <p>Depending on your selected route, depart from home and arrive in Manaus the day before your charter flight.
+          </p>
+        </div>
+      </div>
+
+      <div class="day">
+        <i class="fa-solid fa-hotel icon"></i>
+        <div>
+          <h3>Day 0 – Arrive in Manaus</h3>
+          <p>Our staff will meet you at the airport and transfer you to our base hotel for an overnight stay.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <img src="./assets/iconHidroAero.png" alt="" class="aeroIcon">
+        <div>
+          <h3>Day 1 – Monday – Arrive at Fishery</h3>
+          <p>Transfer by charter flight to the selected fishery, arriving around midday.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <i class="fa-solid fa-fish-fins icon"></i>
+        <div>
+          <h3>Days 2–7 – Fishing</h3>
+          <p>Full days of fishing, relaxation, and enjoyment of the region and facilities.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <i class="fa-solid fa-plane-arrival icon"></i>
+        <div>
+          <h3>Day 8 – Return to Manaus</h3>
+          <p>Charter flight back to Manaus followed by transfer to our base hotel or to your international flight.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <i class="fa-solid fa-house-chimney icon"></i>
+        <div>
+          <h3>Day XX – Return Home</h3>
+          <p>Travel home.</p>
+        </div>
+      </div>
+
+      <a href="multiSpecies.html" class="back-button">← Back to Multi-Species</a>
     </div>
 
-    <div class="day">
-      <i class="fa-solid fa-fish-fins icon"></i>
-      <div>
-        <h3>Days 2–7 – Fishing</h3>
-        <p>Full days of fishing, relaxation, and enjoyment of the region and facilities.</p>
-      </div>
-    </div>
+    <script>
+      function showYear(year, btn) {
+        document.querySelectorAll('.year-table').forEach(div => div.style.display = 'none');
+        document.getElementById('year-' + year).style.display = 'block';
 
-    <div class="day">
-      <i class="fa-solid fa-plane-arrival icon"></i>
-      <div>
-        <h3>Day 8 – Return to Manaus</h3>
-        <p>Charter flight back to Manaus followed by transfer to our base hotel or to your international flight.</p>
-      </div>
-    </div>
-
-    <div class="day">
-      <i class="fa-solid fa-house-chimney icon"></i>
-      <div>
-        <h3>Day XX – Return Home</h3>
-        <p>Travel home.</p>
-      </div>
-    </div>
-
-    <a href="multiSpecies.html" class="back-button">← Back to Multi-Species</a>
-  </div>
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    </script>
 </body>
 
 </html>
