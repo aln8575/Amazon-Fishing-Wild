@@ -771,7 +771,7 @@ nav {
 
 .about-hero {
   display: flex;
-  min-height: 90vh;
+  min-height: 60vh;
   background: #0a0d14;
 }
 
@@ -862,7 +862,7 @@ nav {
 
 .about-story {
   background: #f8f8f8;
-  padding: 100px 20px;
+  padding: 20px 20px;
 }
 
 .story-container {
@@ -922,4 +922,14 @@ nav {
   .about-highlights {
     grid-template-columns: 1fr;
   }
+}
+
+.emailShip{
+    text-decoration: none;
+    color: #000;
+}
+
+.emailShip:hover{
+    text-decoration: none;
+    color: #3e6fff;
 }
