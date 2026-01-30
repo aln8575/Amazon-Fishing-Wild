@@ -685,23 +685,48 @@ body {
     background: #909090;
 }
 
+.trip-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 
-.price {
+    width: fit-content;
+    max-width: 90%;
+    margin: 0px auto;
+
+    padding: 14px 26px;
+    border-radius: 30px;
+    background: rgb(10 34 39);
+    border: 1px solid rgb(0 255 123 / 30%);
+}
+
+
+.trip-price .label {
     font-family: "Lucida Console", Monaco, monospace;
-    font-size: 15px;
-    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    box-shadow: inset 0 0 0 0 #000000;
+    color: #c8ffc8;
 }
 
-.price span {
+.trip-price .value {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    font-weight: bold;
     color: #08ff00;
-    transition: color 0.3s ease;
+
+    padding-left: 14px;
+    border-left: 2px solid rgba(8, 255, 0, 0.4);
+
+    transition: all 0.3s ease;
 }
 
-.price span:hover {
-    color: #ff6600;
+.trip-price:hover .value {
+    color: #ffb703;
+    transform: scale(1.05);
 }
+
 
 .slide_down:hover {
     box-shadow: inset 0 100px 0 0 #000000;

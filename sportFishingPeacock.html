@@ -27,22 +27,18 @@
 <body>
 
   <!-- VIDEO MODAL -->
-<div class="video-modal" id="videoModal">
-  <div class="video-modal-content">
-    <span class="video-close" onclick="closeVideoModal()">&times;</span>
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <span class="video-close" onclick="closeVideoModal()">&times;</span>
 
-    <div class="video-wrapper">
-      <iframe
-        id="youtubeFrame"
-        src=""
-        title="Amazon Multi Species Trip"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+      <div class="video-wrapper">
+        <iframe id="youtubeFrame" src="" title="Amazon Multi Species Trip" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </div>
-</div>
   <header class="header" id="home">
     <nav>
       <div class="nav container">
@@ -112,7 +108,8 @@
       </div>
       <div class="header__socials">
         <span>Follow us</span>
-        <a href="https://www.instagram.com/amazonfishingw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="ri-instagram-line"></i></a>
+        <a href="https://www.instagram.com/amazonfishingw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+            class="ri-instagram-line"></i></a>
         <a href="https://wa.me/+559294946453" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
@@ -169,7 +166,8 @@
       <div class="about__content about__content-2">
         <h3 class="section__subheader">Accommodations</h3>
         <h2 class="section__header">Yacht Accommodations</h2>
-        <p class="textAboutExploratory">Our guests stay aboard the TUPANA-X yacht, a classic-style vessel in the heart of the Amazon rainforest.</p>
+        <p class="textAboutExploratory">Our guests stay aboard the TUPANA-X yacht, a classic-style vessel in the heart
+          of the Amazon rainforest.</p>
         <label for="modal-toggle-2" class="button_slide slide_right" onclick="openModal('modal-2')">Read more
           <span><i class="ri-arrow-right-line"></i></span>
         </label>
@@ -222,7 +220,8 @@
       <div class="about__content about__content-4">
         <h3 class="section__subheader">Folder</h3>
         <h2 class="section__header">Download Digital Brochure</h2>
-        <p>Our team specializes in peacock bass fishing, known for our expertise and consistent success in targeting these prized fish.</p>
+        <p>Our team specializes in peacock bass fishing, known for our expertise and consistent success in targeting
+          these prized fish.</p>
         <label for="modal-toggle-4" class="button_slide slide_right" onclick="openModal('modal-4')">Read more
           <span><i class="ri-arrow-right-line"></i></span>
         </label>
@@ -260,6 +259,19 @@
     </div>
 
     <section class="galleryV2-section">
+      <div class="trip-price">
+        <span class="label">Multi Species Trip</span>
+        <span class="value">US$ 6,499.00 For single</span>
+      </div>
+      </div>
+      <div class="galleryV2-section">
+        <div class="trip-price">
+          <span class="label">Multi Species Trip</span>
+          <span class="value">US$ 5.900,00 For double</span>
+        </div>
+      </div>
+
+
       <h2 class="galleryV2-title">Unforgettable Amazon Adventures</h2>
       <p class="galleryV2-subtitle">
         Stunning moments captured during our exclusive sport fishing expeditions.
@@ -305,8 +317,8 @@
           <h4>Contact a travel expert</h4>
           <p>For diretor of Sales and customer relation USA, Call Arden Debelle</p>
           <p><a href="tel:+12146821851">Phone: +1 (214) 682-1851</a> or <br><a
-              href="mailto:ardendebelle@amazonfishingwild.com?subject=Questions about travel packages">e-mail: 
-              <span  class="emailLink">ardendebelle@amazonfishingwild.com</span></a></p>
+              href="mailto:master@amazonfishingwild.com?subject=Questions about travel packages">e-mail:
+              <span class="emailLink">master@amazonfishingwild.com</span></a></p>
         </div>
         <a href="sobre.html">
           <p>Organize your Multi Species trip with Wellington Melo’s “Fishing Wild</p>
@@ -314,8 +326,10 @@
         <div class="footer__col">
           <ul class="footer__links">
             <li>
-              <p class="price">Giant Peacock Bass Trip Price: <span class="price">U$ 6.499,00 For single occupancy</span></p>
-              <p class="price">Giant Peacock Bass Trip Price: <span class="price">U$ 5.900,00 For double occupancy</span></p>
+              <p class="price">Giant Peacock Bass Trip Price: <span class="price">U$ 6.499,00 For single
+                  occupancy</span></p>
+              <p class="price">Giant Peacock Bass Trip Price: <span class="price">U$ 5.900,00 For double
+                  occupancy</span></p>
               <button class="wtrvl-checkout_button" id="wetravel_button_widget" data-env="https://www.wetravel.com"
                 data-version="v0.3" data-uid="1275623" data-uuid="27424822"
                 href="https://www.wetravel.com/checkout_embed?uuid=27424822" style="background-color:#33ae3f;color:#ffffff;border: 0px;border-radius: 5px;font-family:
@@ -359,7 +373,9 @@
       <div class="footer-social">
         <h3>Social Media</h3>
         <ul>
-          <li><a href="https://www.instagram.com/amazonfishingw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></i> Instagram</a></li>
+          <li><a
+              href="https://www.instagram.com/amazonfishingw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></i>
+              Instagram</a></li>
         </ul>
       </div>
 
@@ -450,22 +466,22 @@
       });
     })();
 
-     function openVideoModal() {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("youtubeFrame");
+    function openVideoModal() {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("youtubeFrame");
 
-  iframe.src =
-    "https://www.youtube-nocookie.com/embed/AHZfecemQhM?autoplay=1&rel=0";
-  modal.style.display = "flex";
-} 
+      iframe.src =
+        "https://www.youtube-nocookie.com/embed/AHZfecemQhM?autoplay=1&rel=0";
+      modal.style.display = "flex";
+    }
 
-function closeVideoModal() {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("youtubeFrame");
+    function closeVideoModal() {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("youtubeFrame");
 
-  iframe.src = "";
-  modal.style.display = "none";
-}
+      iframe.src = "";
+      modal.style.display = "none";
+    }
 
   </script>
 

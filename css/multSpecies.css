@@ -778,22 +778,48 @@ color: rgb(0, 170, 255);
     height: 400%;
 }
 
-.price {
+.trip-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+
+    padding: 14px 26px;
+    border-radius: 30px;
+    background: rgba(0, 30, 0, 0.6);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+
+.trip-price .label {
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 22px;
-    color: #fff;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    box-shadow: inset 0 0 0 0 #000000;
+    color: #c8ffc8;
 }
 
-.price span {
+.trip-price .value {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 26px;
+    font-weight: bold;
     color: #08ff00;
-    transition: color 0.3s ease;
+
+    padding-left: 14px;
+    border-left: 2px solid rgba(8, 255, 0, 0.4);
+
+    transition: all 0.3s ease;
 }
 
-.price span:hover {
-    color: #ff6600;
+.trip-price:hover .value {
+    color: #ffb703;
+    transform: scale(1.05);
 }
+
 
 .button-slide {
     color: black;
@@ -1215,10 +1241,11 @@ nav {
 }
 
 .galleryV2-title {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
 }
 
 .galleryV2-subtitle {

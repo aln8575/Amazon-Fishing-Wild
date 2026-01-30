@@ -395,16 +395,6 @@ body {
         padding: 0px;
         flex-direction: row;
     }
-
-    .price {
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: 18px;
-        color: #fff;
-        font-weight: 500;
-        text-transform: uppercase;
-        box-shadow: inset 0 0 0 0 #000000;
-        width: 588px;
-    }
 }
 
 @media (max-width:767px) {
@@ -425,16 +415,6 @@ body {
         display: flex;
         position: relative;
         margin: 10px;
-    }
-
-    .price {
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: 18px;
-        color: #fff;
-        font-weight: 500;
-        text-transform: uppercase;
-        box-shadow: inset 0 0 0 0 #000000;
-        width: 100%;
     }
 
     .imgModal {
@@ -740,16 +720,6 @@ video {
     width: 145px;
     border-radius: 13px;
     margin-left: 10px;
-}
-
-
-.price span {
-    color: #08ff00;
-    transition: color 0.3s ease;
-}
-
-.price span:hover {
-    color: #ff6600;
 }
 
 .welloMelo {
@@ -1540,4 +1510,46 @@ nav {
   font-size: 40px;
   color: #fff;
   cursor: pointer;
+}
+
+.trip-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+
+    padding: 14px 26px;
+    border-radius: 30px;
+    background: rgb(30 17 0 / 60%);
+    border: 1px solid rgb(255 139 0 / 30%);
+}
+
+
+.trip-price .label {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.trip-price .value {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+
+    padding-left: 14px;
+    border-left: 1px solid rgb(255 139 0 / 30%);
+
+    transition: all 0.3s ease;
+}
+
+.trip-price:hover .value {
+    color: #ffb703;
+    transform: scale(1.05);
 }
