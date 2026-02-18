@@ -397,20 +397,6 @@ footer {
 }
 
 @media (width > 768px) {
-    /* .nav__logo {
-        flex: 1;
-    }
-
-    .nav__menu__btn {
-        display: none;
-    }
-
-    .nav__action__btn {
-        justify-content: flex-end;
-        display: flex;
-        flex: 1;
-    } */
-
     .header__container {
         height: calc(100% - 0rem);
     }
