@@ -690,11 +690,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 14px;
-
     width: fit-content;
     max-width: 90%;
-    margin: 0px auto;
-
+    margin: 30px auto;
     padding: 14px 26px;
     border-radius: 30px;
     background: rgb(10 34 39);
