@@ -729,7 +729,7 @@ video {
 .textContatoWppAbout {
     font-weight: 800;
     font-family: var(--header-font);
-    color: #4caf50;
+    color: white
 }
 
 .titleExploratory {
@@ -1553,3 +1553,147 @@ nav {
     color: #ffb703;
     transform: scale(1.05);
 }
+
+.footer {
+    background: #171c26;
+    color: #fff;
+    padding: 60px 20px 0;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.payments {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.payments img {
+    max-width: 280px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    padding: 3px;
+    margin: 4px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col.center {
+    text-align: center;
+}
+
+.footer-col.right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.letras {
+    font-size: 1.6rem !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .sectionContatoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 0 !important;
+        background: transparent;
+        width: 90% !important;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .footer-col.right {
+        text-align: center;
+    }
+
+        .nav__links {
+        display: none;
+    }
+
+    .destination__container {
+        grid-template-columns: 1fr;
+    }
+
+    .content h1 {
+        font-size: 4rem;
+    }
+
+    .destination__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination__container {
+        padding-left: 3rem;
+    }
+
+    .content h1 {
+        font-size: 1.9rem;
+    }
+
+    .destination__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutWildTech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutWildTech-text h2 { 
+        font-size: 32px;
+    }
+
+    .tech-subtitle {
+        font-size: 22px;
+    }
+
+    .aboutWildTech-text p {
+        font-size: 16px;
+    }
+}   
