@@ -746,7 +746,7 @@ nav {
 }
 
 .footer {
-    background: #171c26;
+    background: #0a0c10;
     color: #fff;
     padding: 60px 20px 0;
 }
@@ -810,6 +810,24 @@ nav {
     padding: 20px;
     font-size: 0.85rem;
     opacity: 0.6;
+}
+
+.footerPolicys {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    padding: 5px;
+    margin-top: -14px;
+}
+
+.btnP{
+    color: #007bff;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.btnP:hover {
+    color: #b6d9ff;
 }
 
 
