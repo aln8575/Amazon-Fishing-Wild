@@ -42,9 +42,9 @@ try {
 
         $mail->SMTPAuth = true;
 
-        $mail->Username = "amazonfishingwild@gmail.com";
+        $mail->Username = "master@amazonfishingwild.com";
 
-        $mail->Password = "j@tapU2017";
+        $mail->Password = "M@aster12345=";
 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
@@ -57,7 +57,7 @@ try {
     */
 
     $mail->setFrom(
-        "amazonfishingwild@gmail.com",
+        "master@amazonfishingwild.com",
         "Amazon Fishing Wild"
     );
 
@@ -68,7 +68,7 @@ try {
     */
 
     $mail->addAddress(
-        "amazonfishingwild@gmail.com",
+        "master@amazonfishingwild.com",
         "Amazon Fishing Wild"
     );
 
