@@ -3,30 +3,79 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+/*
+====================================
+PHPMailer
+====================================
+*/
+
 require __DIR__ . '/PHPMailer/src/Exception.php';
 require __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer/src/SMTP.php';
 
+/*
+====================================
+CONFIG PRIVADA
+ARQUIVO FORA DO public_html
+====================================
+*/
+
+$config = require __DIR__ . '/../.env.php';
+
+/*
+====================================
+ACEITA SOMENTE POST
+====================================
+*/
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+
     header("Location: index.html");
     exit;
 }
+
+/*
+====================================
+DADOS FORMULÁRIO
+====================================
+*/
 
 $name = trim($_POST["name"] ?? "");
 $email = trim($_POST["email"] ?? "");
 $message = trim($_POST["message"] ?? "");
 
+/*
+====================================
+ANTI SPAM
+====================================
+*/
+
 if (!empty($_POST["_honeypot"])) {
+
     die("Spam detected.");
 }
 
+/*
+====================================
+VALIDAÇÕES
+====================================
+*/
+
 if ($name === "" || $email === "" || $message === "") {
+
     die("Please fill in all fields.");
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
     die("Invalid email address.");
 }
+
+/*
+====================================
+PHPMailer
+====================================
+*/
 
 $mail = new PHPMailer(true);
 
@@ -42,19 +91,32 @@ try {
 
     $mail->isSMTP();
 
-        $mail->Host = "smtp.hostinger.com";
+    $mail->Host = "smtp.hostinger.com";
 
-        $mail->SMTPAuth = true;
+    $mail->SMTPAuth = true;
 
-        $mail->Username = "master@amazonfishingwild.com";
+    /*
+    ====================================
+    DADOS PRIVADOS
+    ====================================
+    */
 
-        $mail->Password = "M@aster12345=";
+    $mail->Username = $config['SMTP_USERNAME'];
 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Password = $config['SMTP_PASSWORD'];
 
-        $mail->Port = 465;
+    /*
+    ====================================
+    SSL
+    ====================================
+    */
 
-        $mail->Timeout = 10;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+
+    $mail->Port = 465;
+
+    $mail->Timeout = 10;
+
     /*
     ====================================
     REMETENTE
@@ -62,7 +124,7 @@ try {
     */
 
     $mail->setFrom(
-        "master@amazonfishingwild.com",
+        $config['SMTP_USERNAME'],
         "Amazon Fishing Wild"
     );
 
@@ -73,7 +135,7 @@ try {
     */
 
     $mail->addAddress(
-        "master@amazonfishingwild.com",
+        $config['SMTP_USERNAME'],
         "Amazon Fishing Wild"
     );
 
@@ -95,6 +157,12 @@ try {
 
     $mail->Subject = "New Contact Request - Amazon Fishing Wild";
 
+    /*
+    ====================================
+    SEGURANÇA HTML
+    ====================================
+    */
+
     $safeName = htmlspecialchars(
         $name,
         ENT_QUOTES,
@@ -114,6 +182,12 @@ try {
             "UTF-8"
         )
     );
+
+    /*
+    ====================================
+    TEMPLATE EMAIL
+    ====================================
+    */
 
     $mail->Body = "
 
@@ -189,13 +263,21 @@ try {
 
     ";
 
+    /*
+    ====================================
+    FALLBACK TEXTO
+    ====================================
+    */
+
     $mail->AltBody = "
-        Name: {$name}
 
-        Email: {$email}
+    Name: {$name}
 
-        Message:
-        {$message}
+    Email: {$email}
+
+    Message:
+    {$message}
+
     ";
 
     /*
@@ -206,17 +288,30 @@ try {
 
     $mail->send();
 
-    header("Location: thanks.html");
+    header("Location: thanks");
 
     exit;
 
 } catch (Exception $e) {
 
     echo "
-    Message could not be sent.<br><br>
 
-    SMTP Error:<br>
+    <div style='
+        font-family:Arial;
+        padding:40px;
+    '>
 
-    {$mail->ErrorInfo}
+      <h2>Email Error</h2>
+
+      <p>
+        Message could not be sent.
+      </p>
+
+      <pre>
+{$mail->ErrorInfo}
+      </pre>
+
+    </div>
+
     ";
 }
