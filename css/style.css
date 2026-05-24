@@ -1171,20 +1171,20 @@ nav {
 }
 
 .contact-luxury-form button {
-  width: 100%;
-  margin-top: 26px;
-  min-height: 60px;
-  border: none;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-     color: #f5deb39e;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: .35s ease;
-  box-shadow: 0 20px 50px rgba(212,176,106,.24);
+    width: 100%;
+    margin-top: 26px;
+    min-height: 60px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #271d0a, var(--gold-2));
+    color: #ffffff9e;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: 0 20px 50px rgba(212, 176, 106, .24);
 }
 
 .contact-luxury-form button:hover {
