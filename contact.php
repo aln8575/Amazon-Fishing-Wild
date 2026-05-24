@@ -38,17 +38,17 @@ try {
 
     $mail->isSMTP();
 
-    $mail->Host = "smtp.hostinger.com";
+        $mail->Host = "smtp.hostinger.com";
 
-    $mail->SMTPAuth = true;
+        $mail->SMTPAuth = true;
 
-    $mail->Username = "master@amazonfishingwild.com";
+        $mail->Username = "amazonfishingwild@gmail.com";
 
-    $mail->Password = "j@tapU2017";
+        $mail->Password = "j@tapU2017";
 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-    $mail->Port = 587;
+        $mail->Port = 465;
 
     /*
     ====================================
@@ -57,7 +57,7 @@ try {
     */
 
     $mail->setFrom(
-        "master@amazonfishingwild.com",
+        "amazonfishingwild@gmail.com",
         "Amazon Fishing Wild"
     );
 
@@ -68,7 +68,7 @@ try {
     */
 
     $mail->addAddress(
-        "master@amazonfishingwild.com",
+        "amazonfishingwild@gmail.com",
         "Amazon Fishing Wild"
     );
 
