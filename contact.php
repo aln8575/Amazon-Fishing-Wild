@@ -16,6 +16,10 @@ $name = trim($_POST["name"] ?? "");
 $email = trim($_POST["email"] ?? "");
 $message = trim($_POST["message"] ?? "");
 
+if (!empty($_POST["_honeypot"])) {
+    die("Spam detected.");
+}
+
 if ($name === "" || $email === "" || $message === "") {
     die("Please fill in all fields.");
 }
@@ -50,6 +54,7 @@ try {
 
         $mail->Port = 465;
 
+        $mail->Timeout = 10;
     /*
     ====================================
     REMETENTE
