@@ -1184,7 +1184,7 @@ nav {
     text-transform: uppercase;
     cursor: pointer;
     transition: .35s ease;
-    box-shadow: 0 20px 50px rgba(212, 176, 106, .24);
+    box-shadow: 0 20px 50px rgba(212, 176, 106, .24);   
 }
 
 .contact-luxury-form button:hover {
