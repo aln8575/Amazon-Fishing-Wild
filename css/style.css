@@ -1040,14 +1040,16 @@ nav {
 }
 
 .contact-luxury-container {
-  position: relative;
-  z-index: 2;
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr .85fr;
-  gap: 56px;
-  align-items: center;
+    position: relative;
+    z-index: 2;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: 1fr .85fr;
+    gap: 56px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .contact-luxury-copy {
