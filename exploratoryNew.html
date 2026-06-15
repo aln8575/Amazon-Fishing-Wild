@@ -158,32 +158,68 @@
       <div class="section-heading reveal">
         <span class="eyebrow dark">What species can you expect?</span>
         <h2>Amazon wild species.</h2>
-        <p>Suggested visual grid</p>
       </div>
 
       <div class="species-grid">
-        <article class="fish-card reveal"><img src="assets/bicuda1.jpg" alt="">
+        <article class="fish-card">
+          <div class="fish-slider">
+            <button class="fish-prev">&#10094;</button>
+
+            <img src="assets/oeackock1.png" class="fish-image active" alt="">
+            <img src="assets/oeackock2.png" class="fish-image" alt="">
+            <img src="assets/oeackock3.png" class="fish-image" alt="">
+            <button class="fish-next">&#10095;</button>
+          </div>
           <h3>Peacock Bass (Yarina)</h3>
         </article>
+
+
+       <article class="fish-card">
+          <div class="fish-slider">
+            <button class="fish-prev">&#10094;</button>
+            <img src="assets/wolfFishing2.png" class="fish-image active" alt="">
+            <img src="assets/wolfFishing1.png" class="fish-image" alt="">
+            <img src="assets/wolfFishing3.png" class="fish-image" alt="">
+            <button class="fish-next">&#10095;</button>
+          </div>
+          <h3>Wolf Fish (Trairão)</h3>
+        </article>
+
+       <article class="fish-card">
+          <div class="fish-slider">
+            <button class="fish-prev">&#10094;</button>
+            <img src="assets/pacu2.png" class="fish-image active" alt="">
+            <img src="assets/pacu.png" class="fish-image" alt="">
+            <button class="fish-next">&#10095;</button>
+          </div>
+          <h3>Pacu</h3>
+        </article>
+
+
+        <article class="fish-card">
+          <div class="fish-slider">
+            <img src="assets/piau.png" class="fish-image active" alt="">
+          </div>
+          <h3>Piau</h3>
+        </article>
+
+
         <article class="fish-card reveal"><img src="assets/payara.png" alt="">
           <h3>Payara</h3>
         </article>
         <article class="fish-card reveal"><img src="assets/bicuda.png" alt="">
           <h3>Bicuda</h3>
         </article>
-        <article class="fish-card reveal"><img src="assets/traira.png" alt="">
-          <h3>Wolf Fish (Trairão)</h3>
-        </article>
-        <article class="fish-card reveal"><img src="assets/pacu.jpg" alt="">
-          <h3>Pacu</h3>
-        </article>
-        <article class="fish-card reveal"><img src="assets/mandube.jpg" alt="">
+
+
+        <article class="fish-card reveal"><img src="assets/mandube.png" alt="">
           <h3>Mandubé</h3>
         </article>
+
         <article class="fish-card reveal"><img src="assets/surubim.png" alt="">
           <h3>Surubim</h3>
         </article>
-        <article class="fish-card reveal"><img src="assets/redtailCatfishs.jpg" alt="">
+        <article class="fish-card reveal"><img src="assets/catfish.png" alt="">
           <h3>Redtail Catfish</h3>
         </article>
         <article class="fish-card reveal"><img src="assets/jau.png" alt="">
@@ -195,12 +231,9 @@
         <article class="fish-card reveal"><img src="assets/piranha.png" alt="">
           <h3>Piranha</h3>
         </article>
-        <article class="fish-card reveal"><img src="assets/piau.png" alt="">
-          <h3>Piau</h3>
-        </article>
-        <article class="fish-card reveal"><img src="assets/barbaChata.jpg" alt="">
-          <h3>Barba chata</h3>
-        </article>
+
+
+
       </div>
     </section>
 
@@ -677,6 +710,32 @@
 
     initSlider('#camp .camp-slider')
     initSlider('.fishing-section .camp-slider')
+
+    document.querySelectorAll('.fish-card').forEach(card => {
+
+      const images = card.querySelectorAll('.fish-image');
+      const next = card.querySelector('.fish-next');
+      const prev = card.querySelector('.fish-prev');
+
+      let current = 0;
+
+      next.addEventListener('click', () => {
+        images[current].classList.remove('active');
+
+        current = (current + 1) % images.length;
+
+        images[current].classList.add('active');
+      });
+
+      prev.addEventListener('click', () => {
+        images[current].classList.remove('active');
+
+        current = (current - 1 + images.length) % images.length;
+
+        images[current].classList.add('active');
+      });
+
+    });
 
   </script>
 </body>

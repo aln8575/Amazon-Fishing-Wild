@@ -451,9 +451,10 @@ p {
 }
 
 .fish-card img {
-  height: 190px;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 24px rgba(0,0,0,.16));
+    height: 308px;
+    object-fit: cover;
+    filter: drop-shadow(0 20px 24px rgba(0, 0, 0, .16));
+
 }
 
 .fish-card h3 {
@@ -1394,4 +1395,39 @@ body {
   .slides {
     height: 300px;
   }
+}
+
+.fish-slider{
+    position: relative;
+}
+
+.fish-image{
+    width: 100%;
+    display: none;
+}
+
+.fish-image.active{
+    display: block;
+}
+
+.fish-prev,
+.fish-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+.fish-prev{
+    left: 10px;
+}
+
+.fish-next{
+    right: 10px;
 }
