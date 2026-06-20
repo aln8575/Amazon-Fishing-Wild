@@ -174,10 +174,10 @@ p {
   background: currentColor;
   opacity: .55;
 }
-
+/* 
 .eyebrow.dark {
   color: var(--green-2);
-}
+} */
 
 .hero h1 {
   font-size: clamp(76px, 14vw, 178px);
@@ -618,7 +618,6 @@ p {
 
 .price {
     margin: 26px 0 35px;
-    font-family: fantasy;
     font-size: clamp(45px, 3vw, 77px);
     line-height: .9;
     color: var(--green);
