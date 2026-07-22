@@ -600,6 +600,7 @@ height: 186px;
   align-items: center;
 }
 
+
 .leader-copy h2 {
   font-size: clamp(56px, 8vw, 70px);
   color: var(--cream);
