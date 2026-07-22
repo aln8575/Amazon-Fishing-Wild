@@ -50,7 +50,7 @@ h3 {
 }
 
 p {
-  color: rgba(243, 238, 228, .74);
+  color: rgb(243, 238, 228);
   line-height: 1.75;
 }
 
@@ -447,10 +447,10 @@ img.leader-image.img {
 }
 
 .feature-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, .84), transparent 65%);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .84), transparent 100%);
 }
 
 .feature-card div {
@@ -892,7 +892,7 @@ img.leader-image.img {
     margin-left: 0;
   }
 
-  .feature-card.tall,
+ 
   .feature-card {
     min-height: 430px;
   }
