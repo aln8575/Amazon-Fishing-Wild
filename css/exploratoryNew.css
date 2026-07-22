@@ -155,15 +155,16 @@ p {
 }
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  color: var(--gold-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-2);
+    text-shadow: 0 0px 3px rgb(0 0 0);
 }
 
 .eyebrow::before,

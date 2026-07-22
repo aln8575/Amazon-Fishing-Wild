@@ -570,10 +570,10 @@ display: block;
 }
 
 .fish-card img {
-  height: 220px;
-  object-fit: cover;
-  border-radius: 22px;
-  filter: drop-shadow(0 20px 24px rgba(0,0,0,.16));
+height: 186px;
+    object-fit: cover;
+    border-radius: 22px;
+    filter: drop-shadow(0 20px 24px rgba(0, 0, 0, .16));  
 }
 
 .fish-card h3 {
@@ -601,7 +601,7 @@ display: block;
 }
 
 .leader-copy h2 {
-  font-size: clamp(56px, 8vw, 110px);
+  font-size: clamp(56px, 8vw, 70px);
   color: var(--cream);
 }
 
