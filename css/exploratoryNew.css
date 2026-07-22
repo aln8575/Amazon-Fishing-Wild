@@ -163,8 +163,8 @@ p {
     font-weight: 900;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--gold-2);
-    text-shadow: 0 0px 3px rgb(0 0 0);
+    color: #000000;
+    text-shadow: 0 1px 1px rgb(0 0 0);
 }
 
 .eyebrow::before,
