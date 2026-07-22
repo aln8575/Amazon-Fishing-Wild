@@ -286,12 +286,16 @@ p {
 }
 
 .chapter {
-  background: var(--cream);
-  color: var(--green);
-  display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  gap: 60px;
-  align-items: center;
+    background: var(--cream);
+    color: var(--green);
+    display: grid;
+    grid-template-columns: 1.75fr 1.25fr;
+    gap: 60px;
+    align-items: center;
+}
+
+img.leader-image.img {
+    border-radius: 10px;
 }
 
 .chapter-number {
