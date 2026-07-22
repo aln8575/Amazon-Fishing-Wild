@@ -289,7 +289,7 @@ p {
     background: var(--cream);
     color: var(--green);
     display: grid;
-    grid-template-columns: 1.75fr 1.25fr;
+    grid-template-columns: 1.80fr 1.25fr;
     gap: 60px;
     align-items: center;
 }
